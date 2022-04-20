@@ -1,0 +1,1506 @@
+{
+  "models": [
+    {
+      "name": "StatisticCovid19",
+      "id": "da1a4ab0-bffd-11ec-b82a-e7f2544a3b23",
+      "generator": "random(edge_coverage(100))",
+      "actions": [],
+      "vertices": [
+        {
+          "id": "e44570f0-bffd-11ec-b82a-e7f2544a3b23",
+          "name": "v_Covid-19Statistic",
+          "sharedState": "statisticcovid",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 182.95016229446327, "y": 308.88375498759535 }
+        },
+        {
+          "id": "f75d9820-bffd-11ec-b82a-e7f2544a3b23",
+          "name": "v_PickLocation_StatisticCovid",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 748.1791955535489, "y": 291.30958328870656 }
+        }
+      ],
+      "edges": [
+        {
+          "id": "fc199990-bffd-11ec-b82a-e7f2544a3b23",
+          "name": "e_Click_PickLocationStatisticCovid",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "e44570f0-bffd-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "f75d9820-bffd-11ec-b82a-e7f2544a3b23"
+        },
+        {
+          "id": "fcf94b30-bffd-11ec-b82a-e7f2544a3b23",
+          "name": "e_Click_SetLocationStatisticCovid",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "f75d9820-bffd-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "e44570f0-bffd-11ec-b82a-e7f2544a3b23"
+        },
+        {
+          "id": "29e75e70-bffe-11ec-b82a-e7f2544a3b23",
+          "name": "e_Back_PickLocationStatisticCovid",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "f75d9820-bffd-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "e44570f0-bffd-11ec-b82a-e7f2544a3b23"
+        }
+      ],
+      "startElementId": ""
+    },
+    {
+      "name": "HealtcareFacility",
+      "id": "fd4b26a0-bffb-11ec-b82a-e7f2544a3b23",
+      "generator": "random(edge_coverage(100))",
+      "actions": [],
+      "vertices": [
+        {
+          "id": "14f99ed0-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "v_HealthcareFacility",
+          "sharedState": "healthcarefacility",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 230.93210511298383, "y": 204.92287888080057 }
+        },
+        {
+          "id": "22d68270-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "v_ListFacility",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 222.78084478589648, "y": 501.54251461182935 }
+        },
+        {
+          "id": "23197ee0-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "v_ListLabAntigen",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 476.86173108906877, "y": 420.6567717435929 }
+        },
+        {
+          "id": "235639c0-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "v_ListLabPCR",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 592.7959238693267, "y": 222.91610743774578 }
+        }
+      ],
+      "edges": [
+        {
+          "id": "5d88e840-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "e_Click_ListLabPCR",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "14f99ed0-bffc-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "235639c0-bffc-11ec-b82a-e7f2544a3b23"
+        },
+        {
+          "id": "5e2b90e0-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "e_Back_ListLabPCR",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "235639c0-bffc-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "14f99ed0-bffc-11ec-b82a-e7f2544a3b23"
+        },
+        {
+          "id": "5f8fdbd0-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "e_Back_ListLabAntigen",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "23197ee0-bffc-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "14f99ed0-bffc-11ec-b82a-e7f2544a3b23"
+        },
+        {
+          "id": "602230c0-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "e_Click_ListLabAntigen",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "14f99ed0-bffc-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "23197ee0-bffc-11ec-b82a-e7f2544a3b23"
+        },
+        {
+          "id": "60cfaed0-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "e_Back_ListFacility",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "22d68270-bffc-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "14f99ed0-bffc-11ec-b82a-e7f2544a3b23"
+        },
+        {
+          "id": "61825d00-bffc-11ec-b82a-e7f2544a3b23",
+          "name": "e_Click_ListFacility",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "14f99ed0-bffc-11ec-b82a-e7f2544a3b23",
+          "targetVertexId": "22d68270-bffc-11ec-b82a-e7f2544a3b23"
+        }
+      ],
+      "startElementId": ""
+    },
+    {
+      "name": "EHAC",
+      "id": "cbeaa020-bf21-11ec-be60-076c205d8f33",
+      "generator": "random(vertex_coverage(100))",
+      "actions": ["var item_ehac =0; var personalCheck = 0"],
+      "vertices": [
+        {
+          "id": "d382e680-bf21-11ec-be60-076c205d8f33",
+          "name": "v_eHAC",
+          "sharedState": "ehac",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 286.76036426957137, "y": -142.20705552592793 }
+        },
+        {
+          "id": "e26b1fa0-bf21-11ec-be60-076c205d8f33",
+          "name": "v_Create_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 283.44074940213426, "y": 78.70491629879798 }
+        },
+        {
+          "id": "e3147f00-bf21-11ec-be60-076c205d8f33",
+          "name": "v_My_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 807.3080553928091, "y": -99.0785718038658 }
+        },
+        {
+          "id": "2e3a9ff0-bf22-11ec-be60-076c205d8f33",
+          "name": "v_Travel_eHAC",
+          "actions": ["personalCheck = 0"],
+          "requirements": [],
+          "properties": { "x": 280.64449641280567, "y": 255.852458149399 }
+        },
+        {
+          "id": "244adf90-bf23-11ec-be60-076c205d8f33",
+          "name": "v_Land_Date_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -617.1947304284528, "y": 280.7269807218688 }
+        },
+        {
+          "id": "2646fdb0-bf23-11ec-be60-076c205d8f33",
+          "name": "v_Air_Date_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 771.55521477393, "y": 271.91036285655 }
+        },
+        {
+          "id": "3bdb4870-bf23-11ec-be60-076c205d8f33",
+          "name": "v_Ship_Date_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 280.0449129162934, "y": 506.73265700211726 }
+        },
+        {
+          "id": "4e2f3fd0-bf24-11ec-be60-076c205d8f33",
+          "name": "v_Air_FlightNumber_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 774.3702005172173, "y": 618.0599816030877 }
+        },
+        {
+          "id": "79096730-bf24-11ec-be60-076c205d8f33",
+          "name": "v_Air_FlightInfo_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 771.1872918989168, "y": 907.2369701998899 }
+        },
+        {
+          "id": "96dc9890-bf24-11ec-be60-076c205d8f33",
+          "name": "v_Air_ManualInput_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 772.7299142315375, "y": 1189.567822161327 }
+        },
+        {
+          "id": "92ed9930-bf26-11ec-be60-076c205d8f33",
+          "name": "v_Air_ManualFlightInfo_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 766.0376398111073, "y": 1524.8816190716038 }
+        },
+        {
+          "id": "55149444-d6ee-4a69-bf0c-474eb7ae9267",
+          "name": "v_Ship_ShipDetail_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 283.2902687620066, "y": 741.7544813465937 }
+        },
+        {
+          "id": "90b0baab-3142-4e14-b44c-980e5b533fc8",
+          "name": "v_Ship_Confirmation_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 278.40749402134276, "y": 1356.4772946556789 }
+        },
+        {
+          "id": "a4b69930-bf28-11ec-be60-076c205d8f33",
+          "name": "v_Air_Confirmation_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 747.9502929565509, "y": 2139.7862132158657 }
+        },
+        {
+          "id": "86623470-bf29-11ec-be60-076c205d8f33",
+          "name": "v_Air_Success_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 1663.7889072966923, "y": 2084.210575338488 }
+        },
+        {
+          "id": "d6850950-bf29-11ec-be60-076c205d8f33",
+          "name": "v_Detail_My_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 1382.7209525030999, "y": 49.91583942541972 }
+        },
+        {
+          "id": "54f8a727-26d6-48d7-98de-633269fb508d",
+          "name": "v_Ship_Success_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 275.80049519478894, "y": 1602.9153336500653 }
+        },
+        {
+          "id": "ca286807-48d4-46cb-a675-59966569ed47",
+          "name": "v_Air_PersonalData_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 758.0688037058526, "y": 1816.6129550318785 }
+        },
+        {
+          "id": "d8eadd10-56e6-4a3e-bb10-49a126818b3c",
+          "name": "v_Air_CheckEligibility_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 1229.292480412179, "y": 1508.0471436358248 }
+        },
+        {
+          "id": "9f1acc91-1034-40e4-9738-7de6a330301f",
+          "name": "v_Air_ResultEligibility_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 1241.3372692627509, "y": 1819.0163809970247 }
+        },
+        {
+          "id": "7d1eea74-a3cb-405b-a6e5-73f19ab9d023",
+          "name": "v_Ship_PersonalData_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 280.45886583979035, "y": 1042.5817811479944 }
+        },
+        {
+          "id": "8d7db066-92b7-4618-a5be-6154c7447c9d",
+          "name": "v_Ship_CheckEligibility_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -292.7835446846039, "y": 632.3611520675609 }
+        },
+        {
+          "id": "7e4403f0-c056-4c93-aac9-4f608e963b51",
+          "name": "v_Ship_ResultEligibility_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -318.02381757810554, "y": 1049.9763087099357 }
+        },
+        {
+          "id": "b4e5a612-d15c-4aca-bf02-248bc8419912",
+          "name": "v_Land_LandDetail_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -607.8872454007842, "y": 624.868037638811 }
+        },
+        {
+          "id": "b9bee53a-6843-4b54-a358-f02ab15da804",
+          "name": "v_Land_PersonalData_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -598.6043256759693, "y": 992.3069408353217 }
+        },
+        {
+          "id": "f267c379-d8f7-4615-8908-301fdf8db839",
+          "name": "v_Land_CheckEgibility_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -1187.9641274915462, "y": 596.9582023844756 }
+        },
+        {
+          "id": "ff86de2a-cc02-422c-a27c-f57a02e71d39",
+          "name": "v_Land_ResultEgibility_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -1251.7779166391363, "y": 1039.641183888348 }
+        },
+        {
+          "id": "ae19489f-703f-4c20-bf2b-5572f99bc48e",
+          "name": "v_Land_Confirmation_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -600.7302170143579, "y": 1289.1881528244535 }
+        },
+        {
+          "id": "0e19d4b3-877a-4704-994e-e9acb6425992",
+          "name": "v_Land_Success_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -619.623054980832, "y": 1647.4082618665793 }
+        }
+      ],
+      "edges": [
+        {
+          "id": "0c4ee2a0-f1d0-4107-81c9-925faad41c18",
+          "name": "e_Click_AirResultEligibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "d8eadd10-56e6-4a3e-bb10-49a126818b3c",
+          "targetVertexId": "9f1acc91-1034-40e4-9738-7de6a330301f"
+        },
+        {
+          "id": "e020c617-cabe-4181-b09c-723b54c772d1",
+          "name": "e_Back_AirResultEligibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "9f1acc91-1034-40e4-9738-7de6a330301f",
+          "targetVertexId": "d8eadd10-56e6-4a3e-bb10-49a126818b3c"
+        },
+        {
+          "id": "092cb180-bf22-11ec-be60-076c205d8f33",
+          "name": "e_Click_CreateeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "d382e680-bf21-11ec-be60-076c205d8f33",
+          "targetVertexId": "e26b1fa0-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "09c93fa0-bf22-11ec-be60-076c205d8f33",
+          "name": "e_Back_CreateeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "e26b1fa0-bf21-11ec-be60-076c205d8f33",
+          "targetVertexId": "d382e680-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "11ecfd20-bf22-11ec-be60-076c205d8f33",
+          "name": "e_Click_MyeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "d382e680-bf21-11ec-be60-076c205d8f33",
+          "targetVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "12f9d940-bf22-11ec-be60-076c205d8f33",
+          "name": "e_Back_MyeHAC",
+          "guard": "personalCheck == 0",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33",
+          "targetVertexId": "d382e680-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "49950920-bf22-11ec-be60-076c205d8f33",
+          "name": "e_Click_TraveleHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "e26b1fa0-bf21-11ec-be60-076c205d8f33",
+          "targetVertexId": "2e3a9ff0-bf22-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "4ab175a0-bf22-11ec-be60-076c205d8f33",
+          "name": "e_Back_TraveleHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "2e3a9ff0-bf22-11ec-be60-076c205d8f33",
+          "targetVertexId": "e26b1fa0-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "fff83560-bf23-11ec-be60-076c205d8f33",
+          "name": "e_Click_AirDateeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "2e3a9ff0-bf22-11ec-be60-076c205d8f33",
+          "targetVertexId": "2646fdb0-bf23-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "033956a0-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Click_ShipDateeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "2e3a9ff0-bf22-11ec-be60-076c205d8f33",
+          "targetVertexId": "3bdb4870-bf23-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "04371790-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Click_LandDateeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "2e3a9ff0-bf22-11ec-be60-076c205d8f33",
+          "targetVertexId": "244adf90-bf23-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "0672afb0-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Back_AirDateeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "2646fdb0-bf23-11ec-be60-076c205d8f33",
+          "targetVertexId": "2e3a9ff0-bf22-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "08d509b0-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Back_ShipDateeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "3bdb4870-bf23-11ec-be60-076c205d8f33",
+          "targetVertexId": "2e3a9ff0-bf22-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "0b5265c0-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Back_LandDateeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "244adf90-bf23-11ec-be60-076c205d8f33",
+          "targetVertexId": "2e3a9ff0-bf22-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "520b6890-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Click_AirFlightNumbereHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "2646fdb0-bf23-11ec-be60-076c205d8f33",
+          "targetVertexId": "4e2f3fd0-bf24-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "5342fe30-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Back_AirFlightNumbereHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "4e2f3fd0-bf24-11ec-be60-076c205d8f33",
+          "targetVertexId": "2646fdb0-bf23-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "8869dd90-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Click_AirFlightInfoeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "4e2f3fd0-bf24-11ec-be60-076c205d8f33",
+          "targetVertexId": "79096730-bf24-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "93b233a0-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Back_AirFlightInfoeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "79096730-bf24-11ec-be60-076c205d8f33",
+          "targetVertexId": "4e2f3fd0-bf24-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "9c511490-bf24-11ec-be60-076c205d8f33",
+          "name": "e_Click_AirManualInputeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "79096730-bf24-11ec-be60-076c205d8f33",
+          "targetVertexId": "96dc9890-bf24-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "6a3f6f00-bf25-11ec-be60-076c205d8f33",
+          "name": "e_Back_AirManualInputeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "96dc9890-bf24-11ec-be60-076c205d8f33",
+          "targetVertexId": "79096730-bf24-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "94ade6d0-bf26-11ec-be60-076c205d8f33",
+          "name": "e_Click_AirManualFlightInfoeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "96dc9890-bf24-11ec-be60-076c205d8f33",
+          "targetVertexId": "92ed9930-bf26-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "95fde670-bf26-11ec-be60-076c205d8f33",
+          "name": "e_Back_AirManualFlightInfoeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "92ed9930-bf26-11ec-be60-076c205d8f33",
+          "targetVertexId": "96dc9890-bf24-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "4211534e-70d9-4c1a-bb51-0ab007b24986",
+          "name": "e_Click_ShipDetaileHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "3bdb4870-bf23-11ec-be60-076c205d8f33",
+          "targetVertexId": "55149444-d6ee-4a69-bf0c-474eb7ae9267"
+        },
+        {
+          "id": "185885da-d8f3-4533-bba0-49d37fe7fb91",
+          "name": "e_Close_ShipSuccesseHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "54f8a727-26d6-48d7-98de-633269fb508d",
+          "targetVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "41d7f455-1c74-4794-9ff4-d9ecab3c56d1",
+          "name": "e_Click_ShipSuccesseHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "90b0baab-3142-4e14-b44c-980e5b533fc8",
+          "targetVertexId": "54f8a727-26d6-48d7-98de-633269fb508d"
+        },
+        {
+          "id": "e433c25c-e305-43c5-953b-c8de38108cf3",
+          "name": "e_Close_AirResultEligibilityeHAC",
+          "actions": ["personalCheck = 1"],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "9f1acc91-1034-40e4-9738-7de6a330301f",
+          "targetVertexId": "ca286807-48d4-46cb-a675-59966569ed47"
+        },
+        {
+          "id": "f7fbde95-0dc1-44ae-a4a8-7fd85eba56b2",
+          "name": "e_Click_AirConfirmationeHAC",
+          "guard": "personalCheck == 1",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ca286807-48d4-46cb-a675-59966569ed47",
+          "targetVertexId": "a4b69930-bf28-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "22bccd86-acf9-432c-9761-49322a764864",
+          "name": "e_Back_ShipDetaileHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "55149444-d6ee-4a69-bf0c-474eb7ae9267",
+          "targetVertexId": "3bdb4870-bf23-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "da42fa04-d0b1-4a32-b97d-4f9aabe001a6",
+          "name": "e_Back_AirConfirmationeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "a4b69930-bf28-11ec-be60-076c205d8f33",
+          "targetVertexId": "ca286807-48d4-46cb-a675-59966569ed47"
+        },
+        {
+          "id": "88eadb20-bf29-11ec-be60-076c205d8f33",
+          "name": "e_Click_AirSuccesseHAC",
+          "actions": ["item_ehac++"],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "a4b69930-bf28-11ec-be60-076c205d8f33",
+          "targetVertexId": "86623470-bf29-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "afba76c0-bf29-11ec-be60-076c205d8f33",
+          "name": "e_Close_AirSuccsesseHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "86623470-bf29-11ec-be60-076c205d8f33",
+          "targetVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "ef111040-bf29-11ec-be60-076c205d8f33",
+          "name": "e_Back_DetailMyeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "d6850950-bf29-11ec-be60-076c205d8f33",
+          "targetVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "25eca480-bf2a-11ec-be60-076c205d8f33",
+          "name": "e_Click_DetailMyeHAC",
+          "guard": "item_ehac>0",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33",
+          "targetVertexId": "d6850950-bf29-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "3acfb422-5836-4dba-92d3-07e70960cd56",
+          "name": "e_Delete_DetailMyeHAC",
+          "actions": ["item_ehac--"],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "d6850950-bf29-11ec-be60-076c205d8f33",
+          "targetVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "142725c5-d018-4313-b24a-785ace343e0d",
+          "name": "e_Click_AirPersonalDataeHAC",
+          "guard": "",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "92ed9930-bf26-11ec-be60-076c205d8f33",
+          "targetVertexId": "ca286807-48d4-46cb-a675-59966569ed47"
+        },
+        {
+          "id": "0ae9ae53-773e-4eeb-a727-bcd7c7eb4623",
+          "name": "e_Back_AirPersonalDataeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ca286807-48d4-46cb-a675-59966569ed47",
+          "targetVertexId": "92ed9930-bf26-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "a5229b23-2b69-4976-884a-f8986b58b581",
+          "name": "e_Click_AirCheckEligibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ca286807-48d4-46cb-a675-59966569ed47",
+          "targetVertexId": "d8eadd10-56e6-4a3e-bb10-49a126818b3c"
+        },
+        {
+          "id": "f1b02496-5060-4ec3-b8c5-61f885afbeee",
+          "name": "e_Back_AirCheckEligibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "d8eadd10-56e6-4a3e-bb10-49a126818b3c",
+          "targetVertexId": "ca286807-48d4-46cb-a675-59966569ed47"
+        },
+        {
+          "id": "68a01415-9e71-493c-a74d-086fb2c77c55",
+          "name": "e_Click_ShipPersonalDataeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "55149444-d6ee-4a69-bf0c-474eb7ae9267",
+          "targetVertexId": "7d1eea74-a3cb-405b-a6e5-73f19ab9d023"
+        },
+        {
+          "id": "9f7d7da3-ac30-4e7b-b993-691853dc0d0b",
+          "name": "e_Back_ShipPersonalDataeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7d1eea74-a3cb-405b-a6e5-73f19ab9d023",
+          "targetVertexId": "55149444-d6ee-4a69-bf0c-474eb7ae9267"
+        },
+        {
+          "id": "e2d62a57-47eb-428d-8719-c766103d438d",
+          "name": "e_Click_ShipConfirmationeHAC",
+          "guard": "personalCheck == 1",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7d1eea74-a3cb-405b-a6e5-73f19ab9d023",
+          "targetVertexId": "90b0baab-3142-4e14-b44c-980e5b533fc8"
+        },
+        {
+          "id": "ee25f96e-e0c7-45dd-bd5f-76737e277727",
+          "name": "e_Close_LandSuccesseHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "0e19d4b3-877a-4704-994e-e9acb6425992",
+          "targetVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "019df5b9-65e8-443c-89e4-0dbc2f9cb4de",
+          "name": "e_Click_ShipCheckEligibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7d1eea74-a3cb-405b-a6e5-73f19ab9d023",
+          "targetVertexId": "8d7db066-92b7-4618-a5be-6154c7447c9d"
+        },
+        {
+          "id": "89801cf3-0dd3-437a-ab9f-fcf5363087a3",
+          "name": "e_Back_ShipCheckEligibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "8d7db066-92b7-4618-a5be-6154c7447c9d",
+          "targetVertexId": "7d1eea74-a3cb-405b-a6e5-73f19ab9d023"
+        },
+        {
+          "id": "c3595886-4dc3-4c8d-8982-21e1d2e695e6",
+          "name": "e_Click_ShipResultEligibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "8d7db066-92b7-4618-a5be-6154c7447c9d",
+          "targetVertexId": "7e4403f0-c056-4c93-aac9-4f608e963b51"
+        },
+        {
+          "id": "8f84e78d-1274-424e-a3ce-828aba1cd6e9",
+          "name": "e_Back_ShipResultEligibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7e4403f0-c056-4c93-aac9-4f608e963b51",
+          "targetVertexId": "8d7db066-92b7-4618-a5be-6154c7447c9d"
+        },
+        {
+          "id": "5d32437b-aac6-4d65-bebc-a225ba9c56bd",
+          "name": "e_Close_ShipResultEligibilityeHAC",
+          "actions": ["personalCheck = 1"],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7e4403f0-c056-4c93-aac9-4f608e963b51",
+          "targetVertexId": "7d1eea74-a3cb-405b-a6e5-73f19ab9d023"
+        },
+        {
+          "id": "8f2c565f-ad03-42f4-aae8-6b2407f03ec1",
+          "name": "e_Back_SuccessMyeHAC",
+          "guard": "personalCheck ==1",
+          "actions": ["personalCheck = 0"],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "e3147f00-bf21-11ec-be60-076c205d8f33",
+          "targetVertexId": "e26b1fa0-bf21-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "3718c4d1-f86d-4965-9ce6-4cfdd6c50d39",
+          "name": "e_Click_LandDetaileHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "244adf90-bf23-11ec-be60-076c205d8f33",
+          "targetVertexId": "b4e5a612-d15c-4aca-bf02-248bc8419912"
+        },
+        {
+          "id": "5bac0fc8-f9ea-4b67-bbf1-99109a593c37",
+          "name": "e_Back_LandDetaileHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "b4e5a612-d15c-4aca-bf02-248bc8419912",
+          "targetVertexId": "244adf90-bf23-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "2e5e1beb-6ddd-4134-96a0-55385dfefae8",
+          "name": "e_Click_LandPersonalDataeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "b4e5a612-d15c-4aca-bf02-248bc8419912",
+          "targetVertexId": "b9bee53a-6843-4b54-a358-f02ab15da804"
+        },
+        {
+          "id": "7860a543-bc70-43cd-8dc4-136be9bca7f7",
+          "name": "e_Back_LandPersonalDataeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "b9bee53a-6843-4b54-a358-f02ab15da804",
+          "targetVertexId": "b4e5a612-d15c-4aca-bf02-248bc8419912"
+        },
+        {
+          "id": "56586113-67e4-490a-ac7e-71ba7309c69d",
+          "name": "e_Click_LandCheckEgibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "b9bee53a-6843-4b54-a358-f02ab15da804",
+          "targetVertexId": "f267c379-d8f7-4615-8908-301fdf8db839"
+        },
+        {
+          "id": "e7536803-3ee5-45de-8b3c-09dc667a55d4",
+          "name": "e_Back_LandCheckEgibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "f267c379-d8f7-4615-8908-301fdf8db839",
+          "targetVertexId": "b9bee53a-6843-4b54-a358-f02ab15da804"
+        },
+        {
+          "id": "58fd446e-f296-4695-9b90-ce9e5b81046f",
+          "name": "e_Click_LandResultEgibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "f267c379-d8f7-4615-8908-301fdf8db839",
+          "targetVertexId": "ff86de2a-cc02-422c-a27c-f57a02e71d39"
+        },
+        {
+          "id": "56826a78-73a1-4077-a62b-f852076a27e7",
+          "name": "e_Back_LandResultEgibilityeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ff86de2a-cc02-422c-a27c-f57a02e71d39",
+          "targetVertexId": "f267c379-d8f7-4615-8908-301fdf8db839"
+        },
+        {
+          "id": "c312c046-062d-49d3-b6f6-d283fd111615",
+          "name": "e_Close_LandResultEgibilityeHAC",
+          "actions": ["personalCheck = 1"],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ff86de2a-cc02-422c-a27c-f57a02e71d39",
+          "targetVertexId": "b9bee53a-6843-4b54-a358-f02ab15da804"
+        },
+        {
+          "id": "654472fa-e3a6-4d81-ba6b-4e7c8e8d43cb",
+          "name": "e_Click_LandConfirmationeHAC",
+          "guard": "personalCheck == 1",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "b9bee53a-6843-4b54-a358-f02ab15da804",
+          "targetVertexId": "ae19489f-703f-4c20-bf2b-5572f99bc48e"
+        },
+        {
+          "id": "27fd06e9-c000-4a2b-ba89-834da2c88244",
+          "name": "e_Back_LandConfirmationeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ae19489f-703f-4c20-bf2b-5572f99bc48e",
+          "targetVertexId": "b9bee53a-6843-4b54-a358-f02ab15da804"
+        },
+        {
+          "id": "11addd96-48e7-4159-b178-3cb1d1d3716d",
+          "name": "e_Click_LandSuccesseHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ae19489f-703f-4c20-bf2b-5572f99bc48e",
+          "targetVertexId": "0e19d4b3-877a-4704-994e-e9acb6425992"
+        },
+        {
+          "id": "959fe8d8-bf56-4cb0-9ae8-cd33ca568056",
+          "name": "e_Back_ShipConfirmationeHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "90b0baab-3142-4e14-b44c-980e5b533fc8",
+          "targetVertexId": "7d1eea74-a3cb-405b-a6e5-73f19ab9d023"
+        }
+      ]
+    },
+    {
+      "name": "Vaccine",
+      "id": "60edc300-bedc-11ec-8920-af36217f13ce",
+      "generator": "random(vertex_coverage(100))",
+      "actions": ["var convertCertification = 0"],
+      "vertices": [
+        {
+          "id": "7083ef60-bedc-11ec-8920-af36217f13ce",
+          "name": "v_Home_Vaccine",
+          "sharedState": "vaccin",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 226.86969564110848, "y": 136.9372137739968 }
+        },
+        {
+          "id": "aa56a390-bedc-11ec-8920-af36217f13ce",
+          "name": "v_VaccineTicket",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 220.1528920717635, "y": -147.2352213365504 }
+        },
+        {
+          "id": "aadc2740-bedc-11ec-8920-af36217f13ce",
+          "name": "v_VaccineLocation",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 661.1254705950157, "y": 132.15981046178825 }
+        },
+        {
+          "id": "ab6d1ca0-bedc-11ec-8920-af36217f13ce",
+          "name": "v_VaccineCertificate",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 233.844395263454, "y": 388.1464270519867 }
+        },
+        {
+          "id": "ec352900-bef3-11ec-be60-076c205d8f33",
+          "name": "v_List_Vaccine",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 668.9787851284804, "y": 720.8448042727958 }
+        },
+        {
+          "id": "457e3740-bef4-11ec-be60-076c205d8f33",
+          "name": "v_Form_ConvertCertificate_Destination",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 262.7905060889436, "y": 866.3210687923514 }
+        },
+        {
+          "id": "89672a20-bef4-11ec-be60-076c205d8f33",
+          "name": "v_Form_ConvertCertificate_Identify",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -377.27407665366354, "y": 867.2666810359065 }
+        },
+        {
+          "id": "af9e5650-bef4-11ec-be60-076c205d8f33",
+          "name": "v_Form_ConvertCertificate_Confirmation",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": -1062.6207272245902, "y": 864.1654032248376 }
+        },
+        {
+          "id": "db90a470-bef4-11ec-be60-076c205d8f33",
+          "name": "v_Form_ConvertCertificate_Success",
+          "actions": ["convertCertification++"],
+          "requirements": [],
+          "properties": { "x": -1034.504303347755, "y": 448.1334022012505 }
+        },
+        {
+          "id": "3e26adf0-bef5-11ec-be60-076c205d8f33",
+          "name": "v_ConvertCertificate_Detail",
+          "actions": [],
+          "requirements": ["convertCertification>0"],
+          "properties": { "x": 893.2353843229746, "y": 374.31414032541113 }
+        },
+        {
+          "id": "d4f75ab0-bef8-11ec-be60-076c205d8f33",
+          "name": "v_Search_VaccineLocation",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 640.1257642338959, "y": -178.99051340534237 }
+        },
+        {
+          "id": "254c1500-bef9-11ec-be60-076c205d8f33",
+          "name": "v_VaccineTicket_Detail",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 212.13055884953508, "y": -385.1238171826323 }
+        }
+      ],
+      "edges": [
+        {
+          "id": "cd263ac0-bedc-11ec-8920-af36217f13ce",
+          "name": "e_Click_VaccineTicket",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7083ef60-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "aa56a390-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "ce0688a0-bedc-11ec-8920-af36217f13ce",
+          "name": "e_Click_VaccineLocation",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7083ef60-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "aadc2740-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "cee01fc0-bedc-11ec-8920-af36217f13ce",
+          "name": "e_Click_VaccineCertificate",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7083ef60-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "e4128980-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_VaccineCertificate",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "7083ef60-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "e65f5fb0-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_VaccineLocation",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "aadc2740-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "7083ef60-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "e7b293a0-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_VaccineTicket",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "aa56a390-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "7083ef60-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "295de600-bef4-11ec-be60-076c205d8f33",
+          "name": "e_Click_ListVaccine",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "ec352900-bef3-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "2aafba60-bef4-11ec-be60-076c205d8f33",
+          "name": "e_Back_ListVaccine",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ec352900-bef3-11ec-be60-076c205d8f33",
+          "targetVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "a7337db0-bef4-11ec-be60-076c205d8f33",
+          "name": "e_Click_ConvertMyCertificate_Identify",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "457e3740-bef4-11ec-be60-076c205d8f33",
+          "targetVertexId": "89672a20-bef4-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "a8d287b0-bef4-11ec-be60-076c205d8f33",
+          "name": "e_Back_ConvertMyCertificate_Identify",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "89672a20-bef4-11ec-be60-076c205d8f33",
+          "targetVertexId": "457e3740-bef4-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "c1693d00-bef4-11ec-be60-076c205d8f33",
+          "name": "e_Back_ConvertMyCertificate_Confirmation",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "af9e5650-bef4-11ec-be60-076c205d8f33",
+          "targetVertexId": "89672a20-bef4-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "c2d43eb0-bef4-11ec-be60-076c205d8f33",
+          "name": "e_Click_ConvertMyCertificate_Confirmation",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "89672a20-bef4-11ec-be60-076c205d8f33",
+          "targetVertexId": "af9e5650-bef4-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "f2f03950-bef4-11ec-be60-076c205d8f33",
+          "name": "e_Click_ConvertMyCertificate_Success",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "af9e5650-bef4-11ec-be60-076c205d8f33",
+          "targetVertexId": "db90a470-bef4-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "1507a410-bef5-11ec-be60-076c205d8f33",
+          "name": "e_Close_ConvertMyCertificate_Success",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "db90a470-bef4-11ec-be60-076c205d8f33",
+          "targetVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "295b3170-bef5-11ec-be60-076c205d8f33",
+          "name": "e_Click_ConvertMyCertificate_Destination",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "457e3740-bef4-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "2a52d7e0-bef5-11ec-be60-076c205d8f33",
+          "name": "e_Click_ConvertMyCertificate_Destination",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "457e3740-bef4-11ec-be60-076c205d8f33",
+          "targetVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "646db8a0-bef5-11ec-be60-076c205d8f33",
+          "name": "e_Back_ConvertCertificateDetail",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "3e26adf0-bef5-11ec-be60-076c205d8f33",
+          "targetVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "815d07c0-bef7-11ec-be60-076c205d8f33",
+          "name": "e_Click_ConvertCertificateDetail",
+          "guard": "convertCertification>0",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "3e26adf0-bef5-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "1e39e400-bef8-11ec-be60-076c205d8f33",
+          "name": "e_Delete_ConvertCertificateDetail",
+          "actions": ["convertCertification--"],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "3e26adf0-bef5-11ec-be60-076c205d8f33",
+          "targetVertexId": "ab6d1ca0-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "eed11750-bef8-11ec-be60-076c205d8f33",
+          "name": "e_Click_SearchVaccineLocation",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "aadc2740-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "d4f75ab0-bef8-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "f00e7950-bef8-11ec-be60-076c205d8f33",
+          "name": "e_Click_ModifyLocation",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "d4f75ab0-bef8-11ec-be60-076c205d8f33",
+          "targetVertexId": "aadc2740-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "0d6352f0-bef9-11ec-be60-076c205d8f33",
+          "name": "e_Back_SearchVaccineLocation",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "d4f75ab0-bef8-11ec-be60-076c205d8f33",
+          "targetVertexId": "7083ef60-bedc-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "275db6f0-bef9-11ec-be60-076c205d8f33",
+          "name": "e_Click_VaccineTicketDetail",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "aa56a390-bedc-11ec-8920-af36217f13ce",
+          "targetVertexId": "254c1500-bef9-11ec-be60-076c205d8f33"
+        },
+        {
+          "id": "32225e10-bef9-11ec-be60-076c205d8f33",
+          "name": "e_Back_VaccineTicketDetail",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "254c1500-bef9-11ec-be60-076c205d8f33",
+          "targetVertexId": "aa56a390-bedc-11ec-8920-af36217f13ce"
+        }
+      ]
+    },
+    {
+      "name": "Home", 
+      "id": "5038f980-bed7-11ec-8920-af36217f13ce",
+      "generator": "random(edge_coverage(100))",
+      "actions": [],
+      "vertices": [
+        {
+          "id": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "name": "v_Home",
+          "sharedState": "",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 416.833725717327, "y": 256.8975240032445 }
+        },
+        {
+          "id": "7526b5c0-bed7-11ec-8920-af36217f13ce",
+          "name": "v_Vaccine",
+          "sharedState": "vaccine",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 763.6887105075834, "y": 155.93829876007234 }
+        },
+        {
+          "id": "7eb9bab0-bed7-11ec-8920-af36217f13ce",
+          "name": "v_Covid19TestResult",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 836.5251488478524, "y": 276.05070759505713 }
+        },
+        {
+          "id": "8c1bf010-bed7-11ec-8920-af36217f13ce",
+          "name": "v_eHAC",
+          "sharedState": "ehac",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 767.6677623956346, "y": 407.43580979299713 }
+        },
+        {
+          "id": "99ffffa0-bed7-11ec-8920-af36217f13ce",
+          "name": "v_TravelRegulations",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 680.6681265135063, "y": 530.8818829432103 }
+        },
+        {
+          "id": "a4b675f0-bed7-11ec-8920-af36217f13ce",
+          "name": "v_Telemedicine",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 483.5766835889281, "y": 572.3780871343592 }
+        },
+        {
+          "id": "b9dae7e0-bed7-11ec-8920-af36217f13ce",
+          "name": "v_HealthcareFacility",
+          "sharedState": "healthcarefacility",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 204.0726027221114, "y": 571.8572142643076 }
+        },
+        {
+          "id": "cd067000-bed7-11ec-8920-af36217f13ce",
+          "name": "v_Covid19Statistic",
+          "sharedState": "statisticcovid",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 75.96969581418944, "y": 414.83452319590066 }
+        },
+        {
+          "id": "dacae9a0-bed7-11ec-8920-af36217f13ce",
+          "name": "v_FindHospital",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 41.98275086110464, "y": 227.90871087593533 }
+        },
+        {
+          "id": "58189730-bed9-11ec-8920-af36217f13ce",
+          "name": "v_ScanQRCode",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 241.90134723343112, "y": 17.994658130393468 }
+        },
+        {
+          "id": "50688da0-beda-11ec-8920-af36217f13ce",
+          "name": "v_Notification",
+          "actions": [],
+          "requirements": [],
+          "properties": { "x": 530.4207657265251, "y": 4.549668522966391 }
+        }
+      ],
+      "edges": [
+        {
+          "id": "383789e0-bed8-11ec-8920-af36217f13ce",
+          "name": "e_Click_Vaccine",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "7526b5c0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "3951d380-bed8-11ec-8920-af36217f13ce",
+          "name": "e_Click_Covid19TestResult",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "7eb9bab0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "3a14d560-bed8-11ec-8920-af36217f13ce",
+          "name": "e_Click_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "8c1bf010-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "3ad34360-bed8-11ec-8920-af36217f13ce",
+          "name": "e_Click_TravelRegulations",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "99ffffa0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "3bdf0e10-bed8-11ec-8920-af36217f13ce",
+          "name": "e_Click_Telemedicine",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "a4b675f0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "3d3b69c0-bed8-11ec-8920-af36217f13ce",
+          "name": "e_Click_HealthcareFacility",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "b9dae7e0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "4ebc7630-bed8-11ec-8920-af36217f13ce",
+          "name": "e_Click_Covid19Statistic",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "cd067000-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "5112e950-bed8-11ec-8920-af36217f13ce",
+          "name": "e_Click_FindHospital",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "dacae9a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "b5851060-bed9-11ec-8920-af36217f13ce",
+          "name": "e_Click_ScanQRCode",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "58189730-bed9-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "758e49d0-beda-11ec-8920-af36217f13ce",
+          "name": "e_Click_Notifications",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "50688da0-beda-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "6bef1310-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_FindHospital",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "dacae9a0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "6e159c90-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_Covid19Statistic",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "cd067000-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "7282bab0-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_HealthcareFacility",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "b9dae7e0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "73fcfea0-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_Telemedicine",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "a4b675f0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "75551490-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_TravelRegulations",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "99ffffa0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "76774d70-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_eHAC",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "8c1bf010-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "778d9f70-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_Covid19TestResult",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7eb9bab0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "788ee2d0-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_Vaccine",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "7526b5c0-bed7-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "7d69ddf0-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_Notifications",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "50688da0-beda-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        },
+        {
+          "id": "7eba79d0-bede-11ec-8920-af36217f13ce",
+          "name": "e_Back_ScanQRCode",
+          "actions": [],
+          "requirements": [],
+          "properties": [],
+          "sourceVertexId": "58189730-bed9-11ec-8920-af36217f13ce",
+          "targetVertexId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+        }
+      ],
+      "startElementId": "682e17a0-bed7-11ec-8920-af36217f13ce"
+    }
+  ]
+}

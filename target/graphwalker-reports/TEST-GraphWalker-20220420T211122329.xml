@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites time="0.018" tests="1" failures="0" errors="0">
+    <testsuite name="GraphWalker" tests="1" failures="0" errors="0" time="0.018" timestamp="2022-04-20T21:11:22">
+        <properties>
+            <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+            <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.8.4\bin\m2.conf"/>
+            <property name="env.=D:" value="D:\CODE\TA\TA\tugasakhir"/>
+            <property name="env.ALLUSERSPROFILE" value="C:\ProgramData"/>
+            <property name="env.ANDROID_HOME" value="C:\Users\Maulidito\AppData\Local\Android\Sdk"/>
+            <property name="env.APPDATA" value="C:\Users\Maulidito\AppData\Roaming"/>
+            <property name="env.CHOCOLATEYINSTALL" value="C:\ProgramData\chocolatey"/>
+            <property name="env.CHOCOLATEYLASTPATHUPDATE" value="132523479520477268"/>
+            <property name="env.CHROME_CRASHPAD_PIPE_NAME" value="\\.\pipe\crashpad_6196_MZKTGYNNCYKOHEQG"/>
+            <property name="env.CLASSWORLDS_JAR" value="&quot;C:\Program Files\apache-maven-3.8.4\boot\plexus-classworlds-2.6.0.jar&quot;"/>
+            <property name="env.CLASSWORLDS_LAUNCHER" value="org.codehaus.plexus.classworlds.launcher.Launcher"/>
+            <property name="env.COLORTERM" value="truecolor"/>
+            <property name="env.COMMONPROGRAMFILES" value="C:\Program Files\Common Files"/>
+            <property name="env.COMMONPROGRAMFILES(X86)" value="C:\Program Files (x86)\Common Files"/>
+            <property name="env.COMMONPROGRAMW6432" value="C:\Program Files\Common Files"/>
+            <property name="env.COMPUTERNAME" value="DESKTOP-B3HQPJR"/>
+            <property name="env.COMSPEC" value="C:\WINDOWS\system32\cmd.exe"/>
+            <property name="env.DRIVERDATA" value="C:\Windows\System32\Drivers\DriverData"/>
+            <property name="env.ERROR_CODE" value="0"/>
+            <property name="env.EXEC_DIR" value="D:\CODE\TA\TA\tugasakhir"/>
+            <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer"/>
+            <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default"/>
+            <property name="env.GIT_ASKPASS" value="c:\Users\Maulidito\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh"/>
+            <property name="env.GOPATH" value="D:\GoCode"/>
+            <property name="env.HOMEDRIVE" value="C:"/>
+            <property name="env.HOMEPATH" value="\Users\Maulidito"/>
+            <property name="env.JAVACMD" value="C:\Program Files\Java\jdk1.8.0_201\bin\java.exe"/>
+            <property name="env.JAVA_HOME" value="C:\Program Files\Java\jdk1.8.0_201"/>
+            <property name="env.JVMCONFIG" value="\.mvn\jvm.config"/>
+            <property name="env.LANG" value="en_US.UTF-8"/>
+            <property name="env.LOCALAPPDATA" value="C:\Users\Maulidito\AppData\Local"/>
+            <property name="env.LOGONSERVER" value="\\DESKTOP-B3HQPJR"/>
+            <property name="env.MAVEN_CMD_LINE_ARGS" value="graphwalker:test"/>
+            <property name="env.MAVEN_HOME" value="C:\Program Files\apache-maven-3.8.4"/>
+            <property name="env.MAVEN_PROJECTBASEDIR" value="D:\CODE\TA\TA\tugasakhir"/>
+            <property name="env.NUMBER_OF_PROCESSORS" value="8"/>
+            <property name="env.ONEDRIVE" value="C:\Users\Maulidito\OneDrive"/>
+            <property name="env.ONEDRIVECONSUMER" value="C:\Users\Maulidito\OneDrive"/>
+            <property name="env.ORIGINAL_XDG_CURRENT_DESKTOP" value="undefined"/>
+            <property name="env.OS" value="Windows_NT"/>
+            <property name="env.PATH" value="C:\Python39\Scripts\;C:\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.8.4\bin;C:\Python39\Lib\site-packages\altwalker;C:\Users\Maulidito\AppData\Local\Programs\Microsoft VS Code\bin;C:\EdgeDriver;C:\Users\Maulidito\flutter\bin;C:\graphwalker;C:\Users\Maulidito\AppData\Roaming\npm;C:\Users\Maulidito\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Go\bin;C:\Python39\Scripts\;C:\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.8.4\bin;C:\Python39\Lib\site-packages\altwalker;C:\Users\Maulidito\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Maulidito\AppData\Local\Programs\Python\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Users\Maulidito\AppData\Local\Programs\Microsoft VS Code\bin;C:\EdgeDriver;C:\Users\Maulidito\flutter\bin;C:\graphwalker;C:\Users\Maulidito\AppData\Roaming\npm;C:\Users\Maulidito\AppData\Local\Android\Sdk\platform-tools;C:\Users\Maulidito\go\bin;"/>
+            <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL"/>
+            <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64"/>
+            <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 158 Stepping 10, GenuineIntel"/>
+            <property name="env.PROCESSOR_LEVEL" value="6"/>
+            <property name="env.PROCESSOR_REVISION" value="9e0a"/>
+            <property name="env.PROGRAMDATA" value="C:\ProgramData"/>
+            <property name="env.PROGRAMFILES" value="C:\Program Files"/>
+            <property name="env.PROGRAMFILES(X86)" value="C:\Program Files (x86)"/>
+            <property name="env.PROGRAMW6432" value="C:\Program Files"/>
+            <property name="env.PROMPT" value="$P$G"/>
+            <property name="env.PSMODULEPATH" value="C:\Users\Maulidito\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules"/>
+            <property name="env.PUBLIC" value="C:\Users\Public"/>
+            <property name="env.SESSIONNAME" value="Console"/>
+            <property name="env.SYSTEMDRIVE" value="C:"/>
+            <property name="env.SYSTEMROOT" value="C:\WINDOWS"/>
+            <property name="env.TEMP" value="C:\Users\Maulidito\AppData\Local\Temp"/>
+            <property name="env.TERM_PROGRAM" value="vscode"/>
+            <property name="env.TERM_PROGRAM_VERSION" value="1.66.2"/>
+            <property name="env.TMP" value="C:\Users\Maulidito\AppData\Local\Temp"/>
+            <property name="env.USERDOMAIN" value="DESKTOP-B3HQPJR"/>
+            <property name="env.USERDOMAIN_ROAMINGPROFILE" value="DESKTOP-B3HQPJR"/>
+            <property name="env.USERNAME" value="Maulidito"/>
+            <property name="env.USERPROFILE" value="C:\Users\Maulidito"/>
+            <property name="env.VBOX_MSI_INSTALL_PATH" value="C:\Program Files\Oracle\VirtualBox\"/>
+            <property name="env.VSCODE_GIT_ASKPASS_EXTRA_ARGS" value="--ms-enable-electron-run-as-node"/>
+            <property name="env.VSCODE_GIT_ASKPASS_MAIN" value="c:\Users\Maulidito\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js"/>
+            <property name="env.VSCODE_GIT_ASKPASS_NODE" value="C:\Users\Maulidito\AppData\Local\Programs\Microsoft VS Code\Code.exe"/>
+            <property name="env.VSCODE_GIT_IPC_HANDLE" value="\\.\pipe\vscode-git-2042c25112-sock"/>
+            <property name="env.WDIR" value="D:\"/>
+            <property name="env.WINDIR" value="C:\WINDOWS"/>
+            <property name="env.ZES_ENABLE_SYSMAN" value="1"/>
+            <property name="file.encoding" value="Cp1252"/>
+            <property name="file.encoding.pkg" value="sun.io"/>
+            <property name="file.separator" value="\"/>
+            <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+            <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+            <property name="java.class.path" value="C:\Program Files\apache-maven-3.8.4\boot\plexus-classworlds-2.6.0.jar"/>
+            <property name="java.class.version" value="52.0"/>
+            <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\endorsed"/>
+            <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+            <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_201\jre"/>
+            <property name="java.io.tmpdir" value="C:\Users\Maulidito\AppData\Local\Temp\"/>
+            <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python39\Scripts\;C:\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.8.4\bin;C:\Python39\Lib\site-packages\altwalker;C:\Users\Maulidito\AppData\Local\Programs\Microsoft VS Code\bin;C:\EdgeDriver;C:\Users\Maulidito\flutter\bin;C:\graphwalker;C:\Users\Maulidito\AppData\Roaming\npm;C:\Users\Maulidito\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Go\bin;C:\Python39\Scripts\;C:\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\apache-maven-3.8.4\bin;C:\Python39\Lib\site-packages\altwalker;C:\Users\Maulidito\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Maulidito\AppData\Local\Programs\Python\Python39\;C:\ProgramData\Oracle\Java\javapath;C:\Users\Maulidito\AppData\Local\Programs\Microsoft VS Code\bin;C:\EdgeDriver;C:\Users\Maulidito\flutter\bin;C:\graphwalker;C:\Users\Maulidito\AppData\Roaming\npm;C:\Users\Maulidito\AppData\Local\Android\Sdk\platform-tools;C:\Users\Maulidito\go\bin;;."/>
+            <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+            <property name="java.runtime.version" value="1.8.0_201-b09"/>
+            <property name="java.specification.name" value="Java Platform API Specification"/>
+            <property name="java.specification.vendor" value="Oracle Corporation"/>
+            <property name="java.specification.version" value="1.8"/>
+            <property name="java.vendor" value="Oracle Corporation"/>
+            <property name="java.vendor.url" value="http://java.oracle.com/"/>
+            <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+            <property name="java.version" value="1.8.0_201"/>
+            <property name="java.vm.info" value="mixed mode"/>
+            <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+            <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+            <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+            <property name="java.vm.specification.version" value="1.8"/>
+            <property name="java.vm.vendor" value="Oracle Corporation"/>
+            <property name="java.vm.version" value="25.201-b09"/>
+            <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.8.4\lib\jansi-native"/>
+            <property name="line.separator" value="&#13;&#10;"/>
+            <property name="maven.build.version" value="Apache Maven 3.8.4 (9b656c72d54e5bacbed989b64718c159fe39b537)"/>
+            <property name="maven.conf" value="C:\Program Files\apache-maven-3.8.4/conf"/>
+            <property name="maven.home" value="C:\Program Files\apache-maven-3.8.4"/>
+            <property name="maven.multiModuleProjectDirectory" value="D:\CODE\TA\TA\tugasakhir"/>
+            <property name="maven.version" value="3.8.4"/>
+            <property name="os.arch" value="amd64"/>
+            <property name="os.name" value="Windows 10"/>
+            <property name="os.version" value="10.0"/>
+            <property name="path.separator" value=";"/>
+            <property name="sun.arch.data.model" value="64"/>
+            <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_201\jre\classes"/>
+            <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
+            <property name="sun.cpu.endian" value="little"/>
+            <property name="sun.cpu.isalist" value="amd64"/>
+            <property name="sun.desktop" value="windows"/>
+            <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+            <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher graphwalker:test"/>
+            <property name="sun.java.launcher" value="SUN_STANDARD"/>
+            <property name="sun.jnu.encoding" value="Cp1252"/>
+            <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+            <property name="sun.os.patch.level" value=""/>
+            <property name="sun.stderr.encoding" value="cp437"/>
+            <property name="sun.stdout.encoding" value="cp437"/>
+            <property name="user.country" value="ID"/>
+            <property name="user.dir" value="D:\CODE\TA\TA\tugasakhir"/>
+            <property name="user.home" value="C:\Users\Maulidito"/>
+            <property name="user.language" value="en"/>
+            <property name="user.name" value="Maulidito"/>
+            <property name="user.script" value=""/>
+            <property name="user.timezone" value=""/>
+            <property name="user.variant" value=""/>
+        </properties>
+        <testcase name="Test" time="0.018" classname="com.tugasakhir.Test"/>
+    </testsuite>
+</testsuites>
