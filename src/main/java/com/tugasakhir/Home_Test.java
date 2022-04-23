@@ -10,11 +10,15 @@ import org.graphwalker.java.annotation.AfterExecution;
 import org.graphwalker.java.annotation.BeforeExecution;
 
 import org.graphwalker.java.annotation.GraphWalker;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.functions.ExpectedCondition;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 /**
@@ -25,14 +29,17 @@ import io.appium.java_client.remote.MobileCapabilityType;
  * also: mvn compile
  */
 @GraphWalker(value = "random(edge_coverage(100))", start = "v_Home")
-public class Test extends ExecutionContext implements Home {
+public class Home_Test extends ExecutionContext implements Home {
 
   private AndroidDriver<MobileElement> driver;
+  private WebDriverWait wait;
+  String headerXpathItemButton = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout";
 
   @Override
   public void v_Home() {
-    MobileElement button_email = this.driver.findElementById("com.telkom.tracencare:id/tab_email");
-    button_email.click();
+    // MobileElement button_email =
+    // this.driver.findElementById("com.telkom.tracencare:id/tab_email");
+    // button_email.click();
     // this.driver.wait(10000, 50);
     System.out.println("Running: v_NewVertex");
   }
@@ -90,6 +97,7 @@ public class Test extends ExecutionContext implements Home {
 
   @Override
   public void v_TravelRegulations() {
+
     // TODO Auto-generated method stub
 
   }
@@ -133,120 +141,176 @@ public class Test extends ExecutionContext implements Home {
   @Override
   public void e_Click_Vaccine() {
     // TODO Auto-generated method stub
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[1]"))
+        .click();
 
   }
 
   @Override
   public void e_Click_Covid19TestResult() {
     // TODO Auto-generated method stub
-
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[2]"))
+        .click();
   }
 
   @Override
   public void e_Click_eHAC() {
     // TODO Auto-generated method stub
-
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[3]"))
+        .click();
   }
 
   @Override
   public void e_Click_TravelRegulations() {
     // TODO Auto-generated method stub
-
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[4]"))
+        .click();
   }
 
   @Override
   public void e_Click_Telemedicine() {
     // TODO Auto-generated method stub
-
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[5]"))
+        .click();
   }
 
   @Override
   public void e_Click_HealthcareFacility() {
     // TODO Auto-generated method stub
-
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[6]"))
+        .click();
   }
 
   @Override
   public void e_Click_Covid19Statistic() {
     // TODO Auto-generated method stub
-
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[7]"))
+        .click();
   }
 
   @Override
   public void e_Click_FindHospital() {
     // TODO Auto-generated method stub
 
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[8]"))
+        .click();
   }
 
   @Override
   public void e_Click_ScanQRCode() {
     // TODO Auto-generated method stub
+    String btn_id = "com.telkom.tracencare:id/btn_nav_scan_checkin";
+    String btn_id_agree = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.view.ViewGroup/android.widget.TextView";
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(btn_id)));
+    driver.findElement(By.id(btn_id)).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(btn_id_agree)));
+
+    driver.findElement(By.xpath(btn_id_agree)).click();
 
   }
 
   @Override
   public void e_Click_Notifications() {
     // TODO Auto-generated method stub
+    driver.findElement(By.id("com.telkom.tracencare:id/iv_notification")).click();
 
   }
 
   @Override
   public void e_Back_FindHospital() {
     // TODO Auto-generated method stub
+    WebDriverWait wait = new WebDriverWait(driver, 5);
+    driver.navigate().back();
 
   }
 
   @Override
   public void e_Back_Covid19Statistic() {
     // TODO Auto-generated method stub
+    driver.findElementByAccessibilityId("Navigate up").click();
 
   }
 
   @Override
   public void e_Back_HealthcareFacility() {
     // TODO Auto-generated method stub
+    driver.findElementByAccessibilityId("Navigate up").click();
 
   }
 
   @Override
   public void e_Back_Telemedicine() {
     // TODO Auto-generated method stub
-
+    driver.findElementByAccessibilityId("Navigate up").click();
   }
 
   @Override
   public void e_Back_TravelRegulations() {
     // TODO Auto-generated method stub
-
+    String id = "com.telkom.tracencare:id/iv_back";
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+    driver.findElement(By.id(id)).click();
   }
 
   @Override
   public void e_Back_eHAC() {
     // TODO Auto-generated method stub
+    driver.findElement(By.id("com.telkom.tracencare:id/iv_back")).click();
 
   }
 
   @Override
   public void e_Back_Covid19TestResult() {
     // TODO Auto-generated method stub
+    driver.findElement(By.xpath(
+        "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button"))
+        .click();
 
   }
 
   @Override
   public void e_Back_Vaccine() {
     // TODO Auto-generated method stub
+    driver.findElement(By.id("com.telkom.tracencare:id/iv_back")).click();
 
   }
 
   @Override
   public void e_Back_Notifications() {
     // TODO Auto-generated method stub
+    driver.findElement(By.id("com.telkom.tracencare:id/iv_back")).click();
 
   }
 
   @Override
   public void e_Back_ScanQRCode() {
     // TODO Auto-generated method stub
+
+    driver.findElement(By.id("com.telkom.tracencare:id/ivCloseScanner")).click();
+  }
+
+  @Override
+  public void e_Back_CheckInPreference() {
+    driver.findElementByAccessibilityId("Navigate up").click();
+  }
+
+  @Override
+  public void e_Click_CheckInPreference() {
+    String id = "com.telkom.tracencare:id/btn_nav_scan_settings_checkin";
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
+    driver.findElement(By.id(id)).click();
+  }
+
+  @Override
+  public void v_CheckInPreference() {
 
   }
 
@@ -287,11 +351,12 @@ public class Test extends ExecutionContext implements Home {
     // capabilities.setCapability("app", app.getAbsolutePath());
     capabilities.setCapability("appPackage", appConf.appPackage);
     capabilities.setCapability("appActivity", appConf.activity);
-    capabilities.setCapability("avdArgs", "netfast");
+    // capabilities.setCapability("avdArgs", "netfast");
     capabilities.setCapability("noReset", "true");
     // capabilities.setCapability("autoWebview", "true");
     capabilities.setCapability("autoLaunch", "false");
     capabilities.setCapability("fullReset", "false");
+    capabilities.setCapability(MobileCapabilityType.TAKES_SCREENSHOT, "false");
 
     try {
       System.out.println("get ready for init driver");
@@ -305,7 +370,8 @@ public class Test extends ExecutionContext implements Home {
     } catch (Exception e) {
       System.out.println("error in driver section Execption => " + e.toString());
     }
-    this.driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+    wait = new WebDriverWait(driver, 10);
+    this.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
   }
 
   @AfterExecution

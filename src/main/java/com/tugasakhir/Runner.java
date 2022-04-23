@@ -1,17 +1,17 @@
-package com.tugasakhir;
+// package com.tugasakhir;
 
-import com.tugasakhir.Test;
-import org.graphwalker.java.test.Result;
-import org.graphwalker.java.test.TestExecutor;
+// import com.tugasakhir.Home_Test;
+// import org.graphwalker.java.test.Result;
+// import org.graphwalker.java.test.TestExecutor;
 
-import java.io.IOException;
+// import java.io.IOException;
 
-public class Runner {
-  public static void main(String[] args) throws IOException {
-    TestExecutor executor = new TestExecutor(
-        Test.class);
+// public class Runner {
+// public static void main(String[] args) throws IOException {
+// TestExecutor executor = new TestExecutor(
+// Home_Test.class);
 
-    Result result = executor.execute(true);
-    System.out.println("Done: [" + result.getResults().toString(2) + "]");
-  }
-}
+// Result result = executor.execute(true);
+// System.out.println("Done: [" + result.getResults().toString(2) + "]");
+// }
+// }

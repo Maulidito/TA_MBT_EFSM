@@ -8,23 +8,17 @@ import org.graphwalker.java.annotation.Edge;
 @Model(file = "com/tugasakhir/ModelPeduliLindungi_4.json")
 public interface EHAC {
 
-    @Edge()
-    void e_Click_AirSuccesseHAC();
-
     @Vertex()
     void v_Ship_ResultEligibility_eHAC();
 
     @Edge()
-    void e_Click_AirManualFlightInfoeHAC();
+    void e_Back_ShipResultEligibilityEHAC();
+
+    @Edge()
+    void e_Back_DetailMyEHAC();
 
     @Vertex()
     void v_Air_ResultEligibility_eHAC();
-
-    @Edge()
-    void e_Click_AirPersonalDataeHAC();
-
-    @Edge()
-    void e_Click_LandSuccesseHAC();
 
     @Vertex()
     void v_Air_FlightNumber_eHAC();
@@ -33,19 +27,19 @@ public interface EHAC {
     void v_Land_PersonalData_eHAC();
 
     @Edge()
-    void e_Back_ShipDateeHAC();
+    void e_Close_LandSuccessEHAC();
 
     @Edge()
-    void e_Back_ShipCheckEligibilityeHAC();
+    void e_Click_CreateEHAC();
 
     @Edge()
-    void e_Back_AirDateeHAC();
-
-    @Edge()
-    void e_Back_AirPersonalDataeHAC();
+    void e_Back_CreateEHAC();
 
     @Vertex()
     void v_Detail_My_eHAC();
+
+    @Edge()
+    void e_Back_AirCheckEligibilityEHAC();
 
     @Vertex()
     void v_Air_ManualInput_eHAC();
@@ -53,20 +47,8 @@ public interface EHAC {
     @Vertex()
     void v_Ship_PersonalData_eHAC();
 
-    @Vertex()
-    void v_My_eHAC();
-
     @Edge()
-    void e_Close_ShipResultEligibilityeHAC();
-
-    @Edge()
-    void e_Back_LandDetaileHAC();
-
-    @Edge()
-    void e_Click_ShipPersonalDataeHAC();
-
-    @Edge()
-    void e_Click_LandConfirmationeHAC();
+    void e_Click_TravelEHAC();
 
     @Vertex()
     void v_Create_eHAC();
@@ -74,101 +56,101 @@ public interface EHAC {
     @Vertex()
     void v_Air_CheckEligibility_eHAC();
 
-    @Edge()
-    void e_Click_LandDateeHAC();
-
-    @Edge()
-    void e_Back_LandPersonalDataeHAC();
-
     @Vertex()
     void v_Air_Date_eHAC();
 
     @Edge()
-    void e_Click_AirDateeHAC();
-
-    @Edge()
-    void e_Back_LandDateeHAC();
-
-    @Edge()
-    void e_Click_ShipDateeHAC();
-
-    @Edge()
-    void e_Click_LandDetaileHAC();
+    void e_Click_ShipCheckEligibilityEHAC();
 
     @Vertex()
     void v_Ship_ShipDetail_eHAC();
 
     @Edge()
-    void e_Click_LandPersonalDataeHAC();
+    void e_Click_ShipConfirmationEHAC();
 
     @Vertex()
     void v_Land_Success_eHAC();
 
     @Edge()
-    void e_Back_MyeHAC();
+    void e_Click_DetailMyEHAC();
 
     @Edge()
-    void e_Close_LandResultEgibilityeHAC();
-
-    @Edge()
-    void e_Click_ShipResultEligibilityeHAC();
-
-    @Edge()
-    void e_Click_ShipCheckEligibilityeHAC();
+    void e_Click_LandDateEHAC();
 
     @Vertex()
     void v_Air_ManualFlightInfo_eHAC();
 
     @Edge()
-    void e_Close_AirSuccsesseHAC();
+    void e_Click_AirManualInputEHAC();
 
     @Edge()
-    void e_Delete_DetailMyeHAC();
+    void e_Click_AirConfirmationEHAC();
+
+    @Edge()
+    void e_Back_LandConfirmationEHAC();
+
+    @Edge()
+    void e_Back_AirFlightNumberEHAC();
+
+    @Edge()
+    void e_Back_LandResultEgibilityEHAC();
 
     @Vertex()
     void v_Ship_Confirmation_eHAC();
 
     @Edge()
-    void e_Close_ShipSuccesseHAC();
+    void e_Click_ShipSuccessEHAC();
 
     @Edge()
-    void e_Back_DetailMyeHAC();
+    void e_Close_LandResultEgibilityEHAC();
+
+    @Edge()
+    void e_Back_AirPersonalDataEHAC();
+
+    @Edge()
+    void e_Back_MyEHAC();
 
     @Vertex()
     void v_Ship_Success_eHAC();
 
     @Edge()
-    void e_Click_DetailMyeHAC();
+    void e_Back_ShipConfirmationEHAC();
 
     @Edge()
-    void e_Click_AirManualInputeHAC();
-
-    @Edge()
-    void e_Click_AirConfirmationeHAC();
-
-    @Edge()
-    void e_Back_LandResultEgibilityeHAC();
+    void e_Click_ShipResultEligibilityEHAC();
 
     @Vertex()
     void v_Land_LandDetail_eHAC();
 
     @Edge()
-    void e_Click_ShipSuccesseHAC();
+    void e_Back_LandDetailEHAC();
 
     @Edge()
-    void e_Back_ShipDetaileHAC();
+    void e_Close_AirSuccsessEHAC();
 
     @Edge()
-    void e_Back_ShipConfirmationeHAC();
+    void e_Close_ShipResultEligibilityEHAC();
+
+    @Edge()
+    void e_Click_LandConfirmationEHAC();
 
     @Vertex()
     void v_Air_PersonalData_eHAC();
+
+    @Edge()
+    void e_Click_ShipPersonalDataEHAC();
 
     @Vertex()
     void v_Air_Success_eHAC();
 
     @Edge()
-    void e_Click_AirFlightNumbereHAC();
+    void e_Close_ShipSuccessEHAC();
+
+    @Edge()
+    void e_Click_LandDetailEHAC();
+
+    @Edge()
+    void e_Back_LandDateEHAC();
 
     @Vertex()
     void v_Ship_CheckEligibility_eHAC();
@@ -180,70 +162,85 @@ public interface EHAC {
     void v_Land_Date_eHAC();
 
     @Edge()
-    void e_Click_ShipDetaileHAC();
+    void e_Click_MyEHAC();
 
     @Edge()
-    void e_Back_LandCheckEgibilityeHAC();
+    void e_Back_AirFlightInfoEHAC();
 
     @Edge()
-    void e_Click_LandResultEgibilityeHAC();
-
-    @Edge()
-    void e_Click_ShipConfirmationeHAC();
+    void e_Click_AirSuccessEHAC();
 
     @Vertex()
     void v_Travel_eHAC();
+
+    @Edge()
+    void e_Back_ShipDateEHAC();
+
+    @Edge()
+    void e_Click_AirManualFlightInfoEHAC();
 
     @Vertex()
     void v_Land_ResultEgibility_eHAC();
 
     @Edge()
-    void e_Close_LandSuccesseHAC();
+    void e_Delete_DetailMyEHAC();
 
     @Edge()
-    void e_Back_ShipResultEligibilityeHAC();
+    void e_Click_AirPersonalDataEHAC();
 
     @Edge()
-    void e_Click_LandCheckEgibilityeHAC();
+    void e_Click_LandSuccessEHAC();
 
     @Edge()
-    void e_Back_LandConfirmationeHAC();
-
-    @Edge()
-    void e_Click_CreateeHAC();
-
-    @Edge()
-    void e_Back_AirCheckEligibilityeHAC();
+    void e_Back_ShipCheckEligibilityEHAC();
 
     @Vertex()
     void v_Air_Confirmation_eHAC();
 
     @Edge()
-    void e_Back_CreateeHAC();
+    void e_Back_AirManualFlightInfoEHAC();
 
     @Edge()
-    void e_Back_AirFlightNumbereHAC();
-
-    @Edge()
-    void e_Back_AirConfirmationeHAC();
-
-    @Edge()
-    void e_Back_AirResultEligibilityeHAC();
-
-    @Edge()
-    void e_Click_TraveleHAC();
+    void e_Click_ShipDetailEHAC();
 
     @Vertex()
     void v_Land_CheckEgibility_eHAC();
 
     @Edge()
-    void e_Click_AirCheckEligibilityeHAC();
+    void e_Back_TravelEHAC();
 
     @Edge()
-    void e_Back_ShipPersonalDataeHAC();
+    void e_Click_AirFlightNumberEHAC();
 
     @Edge()
-    void e_Close_AirResultEligibilityeHAC();
+    void e_Back_AirManualInputEHAC();
+
+    @Edge()
+    void e_Click_AirResultEligibilityEHAC();
+
+    @Edge()
+    void e_Back_SuccessMyEHAC();
+
+    @Edge()
+    void e_Click_AirDateEHAC();
+
+    @Edge()
+    void e_Click_ShipDateEHAC();
+
+    @Vertex()
+    void v_MyeHac();
+
+    @Edge()
+    void e_Click_LandPersonalDataEHAC();
+
+    @Edge()
+    void e_Click_AirFlightInfoEHAC();
+
+    @Edge()
+    void e_Click_LandCheckEgibilityEHAC();
+
+    @Edge()
+    void e_Back_AirConfirmationEHAC();
 
     @Vertex()
     void v_Ship_Date_eHAC();
@@ -252,29 +249,32 @@ public interface EHAC {
     void v_Air_FlightInfo_eHAC();
 
     @Edge()
-    void e_Back_AirManualFlightInfoeHAC();
+    void e_Back_ShipDetailEHAC();
 
     @Edge()
-    void e_Back_AirManualInputeHAC();
+    void e_Back_AirResultEligibilityEHAC();
 
     @Edge()
-    void e_Back_TraveleHAC();
+    void e_Click_AirCheckEligibilityEHAC();
 
     @Edge()
-    void e_Click_MyeHAC();
+    void e_Back_LandPersonalDataEHAC();
 
     @Edge()
-    void e_Back_SuccessMyeHAC();
+    void e_Back_ShipPersonalDataEHAC();
 
     @Edge()
-    void e_Click_AirFlightInfoeHAC();
+    void e_Back_LandCheckEgibilityEHAC();
+
+    @Edge()
+    void e_Back_AirDateEHAC();
+
+    @Edge()
+    void e_Click_LandResultEgibilityEHAC();
 
     @Vertex()
     void v_Land_Confirmation_eHAC();
 
     @Edge()
-    void e_Click_AirResultEligibilityeHAC();
-
-    @Edge()
-    void e_Back_AirFlightInfoeHAC();
+    void e_Close_AirResultEligibilityEHAC();
 }

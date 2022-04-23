@@ -1,10 +1,7 @@
 com\tugasakhir\StatisticCovid19.class
-com\tugasakhir\Test$1.class
-com\tugasakhir\Test$configurationDevice.class
-com\tugasakhir\Runner.class
+com\tugasakhir\CheckInPreference.class
 com\tugasakhir\Home.class
-com\tugasakhir\Test.class
+com\tugasakhir\Home_Test$1.class
 com\tugasakhir\Vaccine.class
-com\tugasakhir\Test$appConfiguration.class
 com\tugasakhir\HealtcareFacility.class
 com\tugasakhir\EHAC.class

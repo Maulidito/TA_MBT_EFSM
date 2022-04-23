@@ -29,9 +29,6 @@ public interface Home {
     @Edge()
     void e_Back_Telemedicine();
 
-    @Edge()
-    void e_Back_Covid19Statistic();
-
     @Vertex()
     void v_HealthcareFacility();
 
@@ -77,6 +74,9 @@ public interface Home {
     @Edge()
     void e_Click_ScanQRCode();
 
+    @Vertex()
+    void v_CheckInPreference();
+
     @Edge()
     void e_Click_Telemedicine();
 
@@ -93,11 +93,20 @@ public interface Home {
     void e_Click_TravelRegulations();
 
     @Edge()
+    void e_Click_CheckInPreference();
+
+    @Edge()
+    void e_Back_eHAC();
+
+    @Edge()
+    void e_Back_CheckInPreference();
+
+    @Edge()
+    void e_Back_Covid19Statistic();
+
+    @Edge()
     void e_Click_Covid19Statistic();
 
     @Vertex()
     void v_Covid19Statistic();
-
-    @Edge()
-    void e_Back_eHAC();
 }

@@ -19,4 +19,7 @@ public interface StatisticCovid19 {
 
     @Edge()
     void e_Click_SetLocationStatisticCovid();
+
+    @Vertex()
+    void v_Covid19Statistic();
 }
