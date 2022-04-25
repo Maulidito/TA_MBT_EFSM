@@ -28,7 +28,8 @@ import io.appium.java_client.remote.MobileCapabilityType;
  * running: mvn graphwalker:generate-sources
  * also: mvn compile
  */
-@GraphWalker(value = "quick_random(vertex_coverage(100))", start = "v_Home")
+// @GraphWalker(value = "quick_random(vertex_coverage(100))", start = "v_Home")
+@GraphWalker(value = "quick_random(vertex_coverage(100))")
 public class Home_Test extends ExecutionContext implements Home {
 
   static public AndroidDriver<MobileElement> driver;
@@ -290,6 +291,7 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Back_Notifications() {
     // TODO Auto-generated method stub
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.telkom.tracencare:id/iv_back")));
     driver.findElement(By.id("com.telkom.tracencare:id/iv_back")).click();
 
   }
@@ -368,6 +370,8 @@ public class Home_Test extends ExecutionContext implements Home {
     // capabilities.setCapability("autoWebview", "true");
     capabilities.setCapability("autoLaunch", "false");
     capabilities.setCapability("fullReset", "false");
+    capabilities.setCapability("unicodeKeyboard", "false");
+    capabilities.setCapability("resetKeyboard", "false");
     capabilities.setCapability(MobileCapabilityType.TAKES_SCREENSHOT, "false");
 
     try {
@@ -383,7 +387,7 @@ public class Home_Test extends ExecutionContext implements Home {
       System.out.println("error in driver section Execption => " + e.toString());
     }
     wait = new WebDriverWait(driver, 10);
-    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
   }
 
   @AfterExecution

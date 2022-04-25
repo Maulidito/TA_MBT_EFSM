@@ -28,4 +28,8 @@ public class ScanQrCode_Test extends ExecutionContext implements ScanQrCode {
     public void v_ScanQRCode() {
     };
 
+    @Vertex()
+    public void v_Home() {
+    };
+
 }

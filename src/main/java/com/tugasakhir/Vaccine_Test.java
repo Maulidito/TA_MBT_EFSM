@@ -201,7 +201,7 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
     };
 
     @Override
-    void e_Back_ConvertMyCertificate_Destination() {
+    public void e_Back_ConvertMyCertificate_Destination() {
         Home_Test.getDriver().findElement(By.xpath(
                 "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button"))
                 .click();
