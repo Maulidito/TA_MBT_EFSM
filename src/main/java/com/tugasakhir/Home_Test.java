@@ -28,18 +28,18 @@ import io.appium.java_client.remote.MobileCapabilityType;
  * running: mvn graphwalker:generate-sources
  * also: mvn compile
  */
-@GraphWalker(value = "random(edge_coverage(100))", start = "v_Home")
+@GraphWalker(value = "quick_random(vertex_coverage(100))", start = "v_Home")
 public class Home_Test extends ExecutionContext implements Home {
 
-  private AndroidDriver<MobileElement> driver;
-  private WebDriverWait wait;
+  static public AndroidDriver<MobileElement> driver;
+  static public WebDriverWait wait;
   String headerXpathItemButton = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout";
 
   @Override
   public void v_Home() {
     // MobileElement button_email =
     // this.driver.findElementById("com.telkom.tracencare:id/tab_email");
-    // button_email.click();
+    // button_email.click(){};
     // this.driver.wait(10000, 50);
     System.out.println("Running: v_NewVertex");
   }
@@ -49,15 +49,15 @@ public class Home_Test extends ExecutionContext implements Home {
 
   // MobileElement button_email =
   // this.driver.findElementById("com.telkom.tracencare:id/tab_email");
-  // button_email.click();
+  // button_email.click(){};
   // MobileElement textField_email =
   // this.driver.findElementById("com.telkom.tracencare:id/et_email_auth");
-  // textField_email.click();
+  // textField_email.click(){};
   // textField_email.sendKeys("maulidito@gmail.com");
   // // textField_email.setValue("maulidito@gmail.com");
   // MobileElement button_login =
   // this.driver.findElementById("com.telkom.tracencare:id/btn_login");
-  // button_login.click();
+  // button_login.click(){};
   // // this.driver.wait(500);
 
   // System.out.println("Running: v_NewVertex");
@@ -67,13 +67,13 @@ public class Home_Test extends ExecutionContext implements Home {
   // public void e_ClickIndonesiaCitizen() {
   // MobileElement button_wni =
   // this.driver.findElementById("com.telkom.tracencare:id/btn_wni");
-  // button_wni.click();
+  // button_wni.click(){};
   // MobileElement button_Privacy =
   // this.driver.findElementById("com.telkom.tracencare:id/cb_tnc");
-  // button_Privacy.click();
+  // button_Privacy.click(){};
   // MobileElement button_Agree =
   // this.driver.findElementById("com.telkom.tracencare:id/btn_agree_tou");
-  // button_Agree.click();
+  // button_Agree.click(){};
   // System.out.println("Running: e_SomeOtherAction");
   // }
 
@@ -208,12 +208,13 @@ public class Home_Test extends ExecutionContext implements Home {
   public void e_Click_ScanQRCode() {
     // TODO Auto-generated method stub
     String btn_id = "com.telkom.tracencare:id/btn_nav_scan_checkin";
-    String btn_id_agree = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.view.ViewGroup/android.widget.TextView";
+    // String btn_id_agree =
+    // "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.view.ViewGroup/android.widget.TextView";
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(btn_id)));
     driver.findElement(By.id(btn_id)).click();
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(btn_id_agree)));
+    // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(btn_id_agree)));
 
-    driver.findElement(By.xpath(btn_id_agree)).click();
+    // driver.findElement(By.xpath(btn_id_agree)).click();
 
   }
 
@@ -227,7 +228,10 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Back_FindHospital() {
     // TODO Auto-generated method stub
-    WebDriverWait wait = new WebDriverWait(driver, 5);
+
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+        "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]")));
+
     driver.navigate().back();
 
   }
@@ -294,7 +298,7 @@ public class Home_Test extends ExecutionContext implements Home {
   public void e_Back_ScanQRCode() {
     // TODO Auto-generated method stub
 
-    driver.findElement(By.id("com.telkom.tracencare:id/ivCloseScanner")).click();
+    driver.findElement(By.id("com.telkom.tracencare:id/iv_close")).click();
   }
 
   @Override
@@ -334,6 +338,14 @@ public class Home_Test extends ExecutionContext implements Home {
     final String activity = "com.telkom.tracencare.ui.MainActivity";
   }
 
+  static public AndroidDriver<MobileElement> getDriver() {
+    return driver;
+  }
+
+  static public WebDriverWait getWait() {
+    return wait;
+  }
+
   @BeforeExecution
   public void setup() {
     configurationDevice device = new configurationDevice();
@@ -344,7 +356,7 @@ public class Home_Test extends ExecutionContext implements Home {
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device.deviceName);
     capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, device.deviceVersion);
-    capabilities.setCapability(MobileCapabilityType.UDID, device.udid);
+    // capabilities.setCapability(MobileCapabilityType.UDID, device.udid);
     // capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
     capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 
@@ -371,7 +383,7 @@ public class Home_Test extends ExecutionContext implements Home {
       System.out.println("error in driver section Execption => " + e.toString());
     }
     wait = new WebDriverWait(driver, 10);
-    this.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
   }
 
   @AfterExecution
