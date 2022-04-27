@@ -19,6 +19,7 @@ import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.functions.ExpectedCondition;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 /**
@@ -28,8 +29,8 @@ import io.appium.java_client.remote.MobileCapabilityType;
  * running: mvn graphwalker:generate-sources
  * also: mvn compile
  */
-// @GraphWalker(value = "quick_random(vertex_coverage(100))", start = "v_Home")
-@GraphWalker(value = "quick_random(vertex_coverage(100))")
+@GraphWalker(value = "weighted_random(vertex_coverage(100))", start = "v_Home")
+// @GraphWalker(value = "a_star(reached_vertex(v_eHAC))", start = "v_Home")
 public class Home_Test extends ExecutionContext implements Home {
 
   static public AndroidDriver<MobileElement> driver;
@@ -38,45 +39,8 @@ public class Home_Test extends ExecutionContext implements Home {
 
   @Override
   public void v_Home() {
-    // MobileElement button_email =
-    // this.driver.findElementById("com.telkom.tracencare:id/tab_email");
-    // button_email.click(){};
-    // this.driver.wait(10000, 50);
     System.out.println("Running: v_NewVertex");
   }
-
-  // @Override
-  // public void v_Login() {
-
-  // MobileElement button_email =
-  // this.driver.findElementById("com.telkom.tracencare:id/tab_email");
-  // button_email.click(){};
-  // MobileElement textField_email =
-  // this.driver.findElementById("com.telkom.tracencare:id/et_email_auth");
-  // textField_email.click(){};
-  // textField_email.sendKeys("maulidito@gmail.com");
-  // // textField_email.setValue("maulidito@gmail.com");
-  // MobileElement button_login =
-  // this.driver.findElementById("com.telkom.tracencare:id/btn_login");
-  // button_login.click(){};
-  // // this.driver.wait(500);
-
-  // System.out.println("Running: v_NewVertex");
-  // }
-
-  // @Override
-  // public void e_ClickIndonesiaCitizen() {
-  // MobileElement button_wni =
-  // this.driver.findElementById("com.telkom.tracencare:id/btn_wni");
-  // button_wni.click(){};
-  // MobileElement button_Privacy =
-  // this.driver.findElementById("com.telkom.tracencare:id/cb_tnc");
-  // button_Privacy.click(){};
-  // MobileElement button_Agree =
-  // this.driver.findElementById("com.telkom.tracencare:id/btn_agree_tou");
-  // button_Agree.click(){};
-  // System.out.println("Running: e_SomeOtherAction");
-  // }
 
   @Override
   public void v_Vaccine() {
@@ -162,6 +126,8 @@ public class Home_Test extends ExecutionContext implements Home {
     driver.findElement(By.xpath(
         headerXpathItemButton + "[3]"))
         .click();
+
+    // driver.findElementByAndroidUIAutomator("resourceId(\"com.telkom.tracencare:id/ll_menu_item_home\")").click();
   }
 
   @Override
@@ -268,6 +234,7 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Back_eHAC() {
     // TODO Auto-generated method stub
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.telkom.tracencare:id/iv_back")));
     driver.findElement(By.id("com.telkom.tracencare:id/iv_back")).click();
 
   }
@@ -348,6 +315,11 @@ public class Home_Test extends ExecutionContext implements Home {
     return wait;
   }
 
+  static public void clickAnElementByXpath(String linkText) {
+    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(linkText)));
+    driver.findElement(By.xpath(linkText)).click();
+  }
+
   @BeforeExecution
   public void setup() {
     configurationDevice device = new configurationDevice();
@@ -387,7 +359,7 @@ public class Home_Test extends ExecutionContext implements Home {
       System.out.println("error in driver section Execption => " + e.toString());
     }
     wait = new WebDriverWait(driver, 10);
-    driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @AfterExecution
