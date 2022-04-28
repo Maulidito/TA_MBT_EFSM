@@ -4,6 +4,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import org.graphwalker.core.machine.ExecutionContext;
 import org.graphwalker.java.annotation.AfterExecution;
@@ -11,6 +12,7 @@ import org.graphwalker.java.annotation.BeforeExecution;
 
 import org.graphwalker.java.annotation.GraphWalker;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -106,9 +108,11 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Click_Vaccine() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[1]"))
-        .click();
+    // driver.findElement(By.xpath(
+    // headerXpathItemButton + "[1]"))
+    // .click();
+    
+    driver.findElementByAndroidUIAutomator("text(\"COVID-19 Vaccine\")").click();
 
   }
 
@@ -123,11 +127,11 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Click_eHAC() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[3]"))
-        .click();
+    // driver.findElement(By.xpath(
+    // headerXpathItemButton + "[3]"))
+    // .click();
 
-    // driver.findElementByAndroidUIAutomator("resourceId(\"com.telkom.tracencare:id/ll_menu_item_home\")").click();
+    driver.findElementByAndroidUIAutomator("text(\"EHAC\")").click();
   }
 
   @Override
@@ -316,8 +320,22 @@ public class Home_Test extends ExecutionContext implements Home {
   }
 
   static public void clickAnElementByXpath(String linkText) {
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(linkText)));
-    driver.findElement(By.xpath(linkText)).click();
+
+    // UiObject settingsButton = mDevice.findObject(new
+    // UiSelector().text("Settings"));
+    // settingsButton.clickAndWaitForNewWindow();
+
+    try {
+      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(linkText)));
+      driver.findElement(By.xpath(linkText)).click();
+    } catch (StaleElementReferenceException e) {
+      driver.findElementByAndroidUIAutomator("text(\"back\")").click();
+      // TODO: handle exception
+    } catch (org.openqa.selenium.TimeoutException e) {
+      // TODO: handle exception
+      driver.findElement(By.xpath(linkText)).click();
+    }
+
   }
 
   @BeforeExecution
