@@ -319,23 +319,30 @@ public class Home_Test extends ExecutionContext implements Home {
     return wait;
   }
 
-  static public void clickAnElementByXpath(String linkText) {
-
-    // UiObject settingsButton = mDevice.findObject(new
-    // UiSelector().text("Settings"));
-    // settingsButton.clickAndWaitForNewWindow();
-
+  static public void clickAnElementByXpath(String xpathText) {
     try {
-      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(linkText)));
-      driver.findElement(By.xpath(linkText)).click();
+      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathText)));
+      driver.findElement(By.xpath(xpathText)).click();
     } catch (StaleElementReferenceException e) {
       driver.findElementByAndroidUIAutomator("text(\"back\")").click();
       // TODO: handle exception
     } catch (org.openqa.selenium.TimeoutException e) {
       // TODO: handle exception
-      driver.findElement(By.xpath(linkText)).click();
+      driver.findElement(By.xpath(xpathText)).click();
     }
+  }
 
+  static public void clickAnElementById(String idText) {
+    try {
+      wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(idText)));
+      driver.findElement(By.id(idText)).click();
+    } catch (StaleElementReferenceException e) {
+      driver.findElementByAndroidUIAutomator("text(\"back\")").click();
+      // TODO: handle exception
+    } catch (org.openqa.selenium.TimeoutException e) {
+      // TODO: handle exception
+      driver.findElement(By.id(idText)).click();
+    }
   }
 
   @BeforeExecution
