@@ -12,13 +12,16 @@ import org.graphwalker.java.annotation.BeforeExecution;
 
 import org.graphwalker.java.annotation.GraphWalker;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.functions.ExpectedCondition;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -38,6 +41,8 @@ public class Home_Test extends ExecutionContext implements Home {
   static public AndroidDriver<MobileElement> driver;
   static public WebDriverWait wait;
   String headerXpathItemButton = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout";
+  static Dimension dimension;
+  static TouchAction touch;
 
   @Override
   public void v_Home() {
@@ -108,11 +113,11 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Click_Vaccine() {
     // TODO Auto-generated method stub
-    // driver.findElement(By.xpath(
-    // headerXpathItemButton + "[1]"))
-    // .click();
-    
-    driver.findElementByAndroidUIAutomator("text(\"COVID-19 Vaccine\")").click();
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[1]"))
+        .click();
+
+    // driver.findElementByAndroidUIAutomator("text(\"COVID-19 Vaccine\")").click();
 
   }
 
@@ -127,11 +132,11 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Click_eHAC() {
     // TODO Auto-generated method stub
-    // driver.findElement(By.xpath(
-    // headerXpathItemButton + "[3]"))
-    // .click();
+    driver.findElement(By.xpath(
+        headerXpathItemButton + "[3]"))
+        .click();
 
-    driver.findElementByAndroidUIAutomator("text(\"EHAC\")").click();
+    // driver.findElementByAndroidUIAutomator("text(\"EHAC\")").click();
   }
 
   @Override
@@ -210,21 +215,22 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Back_Covid19Statistic() {
     // TODO Auto-generated method stub
-    driver.findElementByAccessibilityId("Navigate up").click();
+
+    clickAnElementByAccessbilityId("Navigate up");
 
   }
 
   @Override
   public void e_Back_HealthcareFacility() {
     // TODO Auto-generated method stub
-    driver.findElementByAccessibilityId("Navigate up").click();
+    clickAnElementByAccessbilityId("Navigate up");
 
   }
 
   @Override
   public void e_Back_Telemedicine() {
     // TODO Auto-generated method stub
-    driver.findElementByAccessibilityId("Navigate up").click();
+    clickAnElementByAccessbilityId("Navigate up");
   }
 
   @Override
@@ -276,7 +282,7 @@ public class Home_Test extends ExecutionContext implements Home {
 
   @Override
   public void e_Back_CheckInPreference() {
-    driver.findElementByAccessibilityId("Navigate up").click();
+    clickAnElementByAccessbilityId("Navigate up");
   }
 
   @Override
@@ -319,6 +325,18 @@ public class Home_Test extends ExecutionContext implements Home {
     return wait;
   }
 
+  static public int getDimensionHeight() {
+    return dimension.height;
+  }
+
+  static public int getDimensionWidth() {
+    return dimension.width;
+  }
+
+  static public TouchAction getTouch() {
+    return touch;
+  }
+
   static public void clickAnElementByXpath(String xpathText) {
     try {
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathText)));
@@ -345,8 +363,19 @@ public class Home_Test extends ExecutionContext implements Home {
     }
   }
 
+  static public void clickAnElementByAccessbilityId(String accessId) {
+    try {
+      wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId(accessId)));
+      driver.findElementByAccessibilityId(accessId).click();
+    } catch (org.openqa.selenium.TimeoutException e) {
+      // TODO: handle exception
+      driver.findElement(By.id(accessId)).click();
+    }
+  }
+
   @BeforeExecution
   public void setup() {
+
     configurationDevice device = new configurationDevice();
     appConfiguration appConf = new appConfiguration();
     File classpathRoot = new File(System.getProperty("user.dir"));
@@ -374,6 +403,8 @@ public class Home_Test extends ExecutionContext implements Home {
     try {
       System.out.println("get ready for init driver");
       driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+      dimension = driver.manage().window().getSize();
+      touch = new TouchAction(driver);
 
       driver.launchApp();
       System.out.println("Check driver =>" + driver);

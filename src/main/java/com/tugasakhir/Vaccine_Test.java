@@ -1,5 +1,6 @@
 package com.tugasakhir;
 
+import java.time.Duration;
 import java.util.Random;
 
 import org.graphwalker.core.machine.ExecutionContext;
@@ -8,11 +9,15 @@ import org.graphwalker.java.annotation.Edge;
 import org.graphwalker.java.annotation.GraphWalker;
 import org.graphwalker.java.annotation.Vertex;
 import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.touch.TouchActions;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 
 @GraphWalker(value = "weighted_random(vertex_coverage(100))")
 public class Vaccine_Test extends ExecutionContext implements Vaccine {
@@ -33,13 +38,37 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         @Override
         public void e_Delete_ConvertCertificateDetail() {
-                Home_Test.getDriver().findElement(
-                                MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))" +
-                                                ".scrollIntoView(new UiSelector().text(\"Delete Certificate\"))"));
+
+                // Home_Test.getDriver().findElement(
+                // MobileBy.AndroidUIAutomator("new UiScrollable(new
+                // UiSelector().scrollable(true))" +
+                // ".scrollIntoView(new UiSelector().text(\"Delete Certificate\"))"));
+                scrollDown();
+                Home_Test.getWait().until(ExpectedConditions.presenceOfElementLocated(MobileBy.xpath(
+                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.widget.Button")));
                 Home_Test.clickAnElementByXpath(
                                 "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[4]/android.widget.Button");
 
         };
+
+        public void scrollDown() {
+                Double widthOffset = 0.5 * Home_Test.getDimensionWidth();
+                Double heightOffsetStart = 0.9 * Home_Test.getDimensionHeight();
+                Double heightOffsetEnd = 0.1 * Home_Test.getDimensionHeight();
+                System.out.println("CHECK DIMENSION = " + widthOffset.intValue() + " W = "
+                                + heightOffsetEnd.intValue());
+
+                Home_Test.getTouch()
+                                .press(PointOption.point(widthOffset.intValue(),
+                                                heightOffsetStart.intValue()))
+                                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                                .moveTo(PointOption.point(widthOffset.intValue(),
+                                                heightOffsetEnd.intValue()))
+                                .release().perform();
+
+                // java.lang.Thread.sleep(3000);
+
+        }
 
         @Override
         public void v_List_Vaccine() {
@@ -85,6 +114,9 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
         public void e_Close_ConvertMyCertificate_Success() {
                 Home_Test.getWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
                                 "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.widget.Image")));
+                Home_Test.getWait().until(ExpectedConditions
+                                .presenceOfElementLocated(MobileBy
+                                                .AndroidUIAutomator("text(\"To scan QR Code, please visit\")")));
                 Home_Test.clickAnElementByXpath(
                                 "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
 
@@ -168,7 +200,7 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         @Override
         public void e_Back_VaccineTicketDetail() {
-                Home_Test.driver.findElement(By.id("Navigate up")).click();
+                Home_Test.clickAnElementByAccessbilityId("Navigate up");
         };
 
         @Override
@@ -238,7 +270,8 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
         @Override
         public void e_Back_VaccineTicket() {
 
-                Home_Test.clickAnElementById("Navigate up");
+                Home_Test.clickAnElementByAccessbilityId("Navigate up");
+
         };
 
         @Override

@@ -1321,7 +1321,7 @@
         {
           "id": "f2f03950-bef4-11ec-be60-076c205d8f33",
           "name": "e_Click_ConvertMyCertificate_Success",
-          "actions": ["convertCertification++"],
+          "actions": ["convertCertification = 1"],
           "requirements": [],
           "properties": [],
           "sourceVertexId": "af9e5650-bef4-11ec-be60-076c205d8f33",
@@ -1967,7 +1967,7 @@
                 "id": "db90a470-bef4-11ec-be60-076c205d8f33",
                 "name": "v_Form_ConvertCertificate_Success",
                 "color": "LightSteelBlue",
-                "actions": ["convertCertification++"],
+                "actions": ["convertCertification = 1"],
                 "requirements": []
               },
               "position": { "x": -1034.504303347755, "y": 448.1334022012505 },
