@@ -19,7 +19,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-@GraphWalker(value = "weighted_random(vertex_coverage(100))")
+//@GraphWalker(value = "weighted_random(reached_edge(e_Delete_ConvertCertificateDetail) && reached_edge(e_Click_ConvertMyCertificate_Success))")
 public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         @Override
@@ -61,7 +61,7 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
                 Home_Test.getTouch()
                                 .press(PointOption.point(widthOffset.intValue(),
                                                 heightOffsetStart.intValue()))
-                                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+                                .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
                                 .moveTo(PointOption.point(widthOffset.intValue(),
                                                 heightOffsetEnd.intValue()))
                                 .release().perform();

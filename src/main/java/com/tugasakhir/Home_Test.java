@@ -9,7 +9,7 @@ import java.util.concurrent.TimeoutException;
 import org.graphwalker.core.machine.ExecutionContext;
 import org.graphwalker.java.annotation.AfterExecution;
 import org.graphwalker.java.annotation.BeforeExecution;
-
+import org.graphwalker.java.annotation.Edge;
 import org.graphwalker.java.annotation.GraphWalker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -34,8 +34,10 @@ import io.appium.java_client.remote.MobileCapabilityType;
  * running: mvn graphwalker:generate-sources
  * also: mvn compile
  */
-@GraphWalker(value = "weighted_random(vertex_coverage(100))", start = "v_Home")
+
 // @GraphWalker(value = "a_star(reached_vertex(v_eHAC))", start = "v_Home")
+// @GraphWalker(value = "a_star(reached_vertex(v_Vaccine))", start = "v_Home")
+@GraphWalker(value = "a_star(reached_vertex(v_Settings))", start = "v_Home")
 public class Home_Test extends ExecutionContext implements Home {
 
   static public AndroidDriver<MobileElement> driver;
@@ -296,6 +298,20 @@ public class Home_Test extends ExecutionContext implements Home {
   public void v_CheckInPreference() {
 
   }
+
+  @Override
+  public void e_Back_Settings() {
+    clickAnElementByAccessbilityId("Navigate up");
+  };
+
+  @Override
+  public void v_Settings() {
+  };
+
+  @Override
+  public void e_Click_Settings() {
+    clickAnElementById("com.telkom.tracencare:id/ic_profile");
+  };
 
   public class configurationDevice {
     // Locations

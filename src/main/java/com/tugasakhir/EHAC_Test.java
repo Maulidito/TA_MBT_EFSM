@@ -11,8 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import io.appium.java_client.MobileElement;
 
-//@GraphWalker(value = "quick_random(vertex_coverage(100))")
-@GraphWalker(value = "weighted_random(vertex_coverage(100))")
+//@GraphWalker(value = "weighted_random(reached_edge(e_Back_SuccessMyEHAC) && reached_edge(e_Delete_DetailMyEHAC))")
 public class EHAC_Test extends ExecutionContext implements EHAC {
 
         @Vertex()
