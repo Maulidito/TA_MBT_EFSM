@@ -35,9 +35,9 @@ import io.appium.java_client.remote.MobileCapabilityType;
  * also: mvn compile
  */
 
-// @GraphWalker(value = "a_star(reached_vertex(v_eHAC))", start = "v_Home")
+@GraphWalker(value = "a_star(reached_vertex(v_eHAC))", start = "v_Home")
 // @GraphWalker(value = "a_star(reached_vertex(v_Vaccine))", start = "v_Home")
-@GraphWalker(value = "a_star(reached_vertex(v_Settings))", start = "v_Home")
+// @GraphWalker(value = "a_star(reached_vertex(v_Settings))", start = "v_Home")
 public class Home_Test extends ExecutionContext implements Home {
 
   static public AndroidDriver<MobileElement> driver;
@@ -57,7 +57,7 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void v_Covid19TestResult() {
     // TODO Auto-generated method stub
 
@@ -69,44 +69,44 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void v_TravelRegulations() {
 
     // TODO Auto-generated method stub
 
   }
 
-  @Override
+  // @Override
   public void v_Telemedicine() {
     // TODO Auto-generated method stub
 
   }
 
-  @Override
+  // @Override
   public void v_HealthcareFacility() {
     // TODO Auto-generated method stub
 
   }
 
-  @Override
+  // @Override
   public void v_Covid19Statistic() {
     // TODO Auto-generated method stub
 
   }
 
-  @Override
+  // @Override
   public void v_FindHospital() {
     // TODO Auto-generated method stub
 
   }
 
-  @Override
+  // @Override
   public void v_ScanQRCode() {
     // TODO Auto-generated method stub
 
   }
 
-  @Override
+  // @Override
   public void v_Notification() {
     // TODO Auto-generated method stub
 
@@ -123,7 +123,7 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void e_Click_Covid19TestResult() {
     // TODO Auto-generated method stub
     driver.findElement(By.xpath(
@@ -141,7 +141,7 @@ public class Home_Test extends ExecutionContext implements Home {
     // driver.findElementByAndroidUIAutomator("text(\"EHAC\")").click();
   }
 
-  @Override
+  // @Override
   public void e_Click_TravelRegulations() {
     // TODO Auto-generated method stub
     driver.findElement(By.xpath(
@@ -149,7 +149,7 @@ public class Home_Test extends ExecutionContext implements Home {
         .click();
   }
 
-  @Override
+  // @Override
   public void e_Click_Telemedicine() {
     // TODO Auto-generated method stub
     driver.findElement(By.xpath(
@@ -157,7 +157,7 @@ public class Home_Test extends ExecutionContext implements Home {
         .click();
   }
 
-  @Override
+  // @Override
   public void e_Click_HealthcareFacility() {
     // TODO Auto-generated method stub
     driver.findElement(By.xpath(
@@ -165,7 +165,7 @@ public class Home_Test extends ExecutionContext implements Home {
         .click();
   }
 
-  @Override
+  // @Override
   public void e_Click_Covid19Statistic() {
     // TODO Auto-generated method stub
     driver.findElement(By.xpath(
@@ -173,7 +173,7 @@ public class Home_Test extends ExecutionContext implements Home {
         .click();
   }
 
-  @Override
+  // @Override
   public void e_Click_FindHospital() {
     // TODO Auto-generated method stub
 
@@ -182,7 +182,7 @@ public class Home_Test extends ExecutionContext implements Home {
         .click();
   }
 
-  @Override
+  // @Override
   public void e_Click_ScanQRCode() {
     // TODO Auto-generated method stub
     String btn_id = "com.telkom.tracencare:id/btn_nav_scan_checkin";
@@ -196,14 +196,14 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void e_Click_Notifications() {
     // TODO Auto-generated method stub
     driver.findElement(By.id("com.telkom.tracencare:id/iv_notification")).click();
 
   }
 
-  @Override
+  // @Override
   public void e_Back_FindHospital() {
     // TODO Auto-generated method stub
 
@@ -214,7 +214,7 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void e_Back_Covid19Statistic() {
     // TODO Auto-generated method stub
 
@@ -222,20 +222,20 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void e_Back_HealthcareFacility() {
     // TODO Auto-generated method stub
     clickAnElementByAccessbilityId("Navigate up");
 
   }
 
-  @Override
+  // @Override
   public void e_Back_Telemedicine() {
     // TODO Auto-generated method stub
     clickAnElementByAccessbilityId("Navigate up");
   }
 
-  @Override
+  // @Override
   public void e_Back_TravelRegulations() {
     // TODO Auto-generated method stub
     String id = "com.telkom.tracencare:id/iv_back";
@@ -251,7 +251,7 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void e_Back_Covid19TestResult() {
     // TODO Auto-generated method stub
     driver.findElement(By.xpath(
@@ -267,7 +267,7 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void e_Back_Notifications() {
     // TODO Auto-generated method stub
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.telkom.tracencare:id/iv_back")));
@@ -275,26 +275,26 @@ public class Home_Test extends ExecutionContext implements Home {
 
   }
 
-  @Override
+  // @Override
   public void e_Back_ScanQRCode() {
     // TODO Auto-generated method stub
 
     driver.findElement(By.id("com.telkom.tracencare:id/iv_close")).click();
   }
 
-  @Override
+  // @Override
   public void e_Back_CheckInPreference() {
     clickAnElementByAccessbilityId("Navigate up");
   }
 
-  @Override
+  // @Override
   public void e_Click_CheckInPreference() {
     String id = "com.telkom.tracencare:id/btn_nav_scan_settings_checkin";
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
     driver.findElement(By.id(id)).click();
   }
 
-  @Override
+  // @Override
   public void v_CheckInPreference() {
 
   }

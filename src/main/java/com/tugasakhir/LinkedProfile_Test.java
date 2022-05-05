@@ -10,7 +10,7 @@ import org.graphwalker.java.annotation.Vertex;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-@GraphWalker(value = "quick_random(reached_edge(e_Delete_ProfileDetail) && reached_edge(e_Save_AddProfile))")
+//@GraphWalker(value = "quick_random(reached_edge(e_Delete_ProfileDetail) && reached_edge(e_Save_AddProfile))")
 public class LinkedProfile_Test extends ExecutionContext implements LinkedProfile {
 
     @Vertex()

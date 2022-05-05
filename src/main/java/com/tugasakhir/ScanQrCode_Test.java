@@ -8,7 +8,7 @@ import org.graphwalker.java.annotation.Vertex;
 import org.openqa.selenium.By;
 
 //@GraphWalker(value = "quick_random(vertex_coverage(100))")
-public class ScanQrCode_Test extends ExecutionContext implements ScanQrCode {
+public class ScanQrCode_Test extends ExecutionContext {// implements ScanQrCode {
 
     @Edge()
     public void e_Click_OpenCamera() {
