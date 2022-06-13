@@ -3,6 +3,7 @@ package com.tugasakhir;
 import java.util.Random;
 
 import org.graphwalker.core.machine.ExecutionContext;
+import org.graphwalker.java.annotation.AfterElement;
 import org.graphwalker.java.annotation.BeforeExecution;
 import org.graphwalker.java.annotation.Edge;
 import org.graphwalker.java.annotation.GraphWalker;
@@ -12,6 +13,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 //@GraphWalker(value = "quick_random(reached_edge(e_Delete_ProfileDetail) && reached_edge(e_Save_AddProfile))")
 public class LinkedProfile_Test extends ExecutionContext implements LinkedProfile {
+
+    @AfterElement
+    public void count_step() {
+        Home_Test.step++;
+        System.out.println("====================== STEP " + Home_Test.step + "======================");
+    }
 
     @Vertex()
     public void v_LinkedProfile() {

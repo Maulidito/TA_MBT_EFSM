@@ -7,12 +7,14 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 import org.graphwalker.core.machine.ExecutionContext;
+import org.graphwalker.java.annotation.AfterElement;
 import org.graphwalker.java.annotation.AfterExecution;
 import org.graphwalker.java.annotation.BeforeExecution;
 import org.graphwalker.java.annotation.Edge;
 import org.graphwalker.java.annotation.GraphWalker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,9 +24,11 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.MobileBy.ByAndroidUIAutomator;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.functions.ExpectedCondition;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 /**
@@ -45,6 +49,13 @@ public class Home_Test extends ExecutionContext implements Home {
   String headerXpathItemButton = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout";
   static Dimension dimension;
   static TouchAction touch;
+  static int step;
+
+  @AfterElement
+  public void count_step() {
+    step++;
+    System.out.println("====================== STEP " + step + "======================");
+  }
 
   @Override
   public void v_Home() {
@@ -358,20 +369,60 @@ public class Home_Test extends ExecutionContext implements Home {
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathText)));
       driver.findElement(By.xpath(xpathText)).click();
     } catch (StaleElementReferenceException e) {
-      driver.findElementByAndroidUIAutomator("text(\"back\")").click();
+      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
       // TODO: handle exception
     } catch (org.openqa.selenium.TimeoutException e) {
       // TODO: handle exception
-      driver.findElement(By.xpath(xpathText)).click();
+      // driver.findElement(By.xpath(xpathText)).click();
+    }
+  }
+
+  static public void
+
+      clickAnElementByTextContains(String text) {
+    try {
+      // wait.until(ExpectedConditions.visibilityOfElementLocated(ByAndroidUIAutomator.AndroidUIAutomator(text)));
+      sleepBeforeActivity();
+      driver.findElementByAndroidUIAutomator(
+          "new UiSelector().textContains(\"" + text + "\")").click();
+
+    } catch (NoSuchElementException e) {
+      sleepBeforeActivity();
+      driver.findElementByAndroidUIAutomator(
+          "new UiSelector().textContains(\"" + "check" + "\")").click();
+
+    } catch (StaleElementReferenceException e) {
+      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
+      // TODO: handle exception
+    } catch (org.openqa.selenium.TimeoutException e) {
+      // TODO: handle exception
+      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
     }
   }
 
   static public void clickAnElementById(String idText) {
     try {
-      wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(idText)));
-      driver.findElement(By.id(idText)).click();
+      wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(idText)));
+      driver.findElement(MobileBy.id(idText)).click();
+
     } catch (StaleElementReferenceException e) {
-      driver.findElementByAndroidUIAutomator("text(\"back\")").click();
+      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
+      // TODO: handle exception
+    } catch (org.openqa.selenium.TimeoutException e) {
+      // TODO: handle exception
+      driver.findElement(By.id(idText)).click();
+    }
+  }
+
+  static public void clickAnElementByResourceId(String idText) {
+    try {
+      // wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(idText)));
+      sleepBeforeActivity();
+      driver.findElementByAndroidUIAutomator(
+          "new UiSelector().resourceId(\"" + idText + "\")").click();
+
+    } catch (StaleElementReferenceException e) {
+      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
       // TODO: handle exception
     } catch (org.openqa.selenium.TimeoutException e) {
       // TODO: handle exception
@@ -389,6 +440,16 @@ public class Home_Test extends ExecutionContext implements Home {
     }
   }
 
+  static public void sleepBeforeActivity() {
+    try {
+
+      Thread.sleep(3000);
+    } catch (InterruptedException e) {
+      // TODO: handle exception
+    }
+
+  }
+
   @BeforeExecution
   public void setup() {
 
@@ -401,7 +462,7 @@ public class Home_Test extends ExecutionContext implements Home {
     capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device.deviceName);
     capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, device.deviceVersion);
     // capabilities.setCapability(MobileCapabilityType.UDID, device.udid);
-    // capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
+    capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
     capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 
     // capabilities.setCapability("app", app.getAbsolutePath());
@@ -438,6 +499,7 @@ public class Home_Test extends ExecutionContext implements Home {
   public void tearDown() {
     driver.quit();
     System.out.println("TEST DONE");
+    System.out.println("THE TEST HAVE " + step + " STEP");
   }
 
 }

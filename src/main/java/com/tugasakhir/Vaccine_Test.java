@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.Random;
 
 import org.graphwalker.core.machine.ExecutionContext;
+import org.graphwalker.java.annotation.AfterElement;
 import org.graphwalker.java.annotation.BeforeExecution;
 import org.graphwalker.java.annotation.Edge;
 import org.graphwalker.java.annotation.GraphWalker;
@@ -21,6 +22,12 @@ import io.appium.java_client.touch.offset.PointOption;
 
 //@GraphWalker(value = "weighted_random(reached_edge(e_Delete_ConvertCertificateDetail) && reached_edge(e_Click_ConvertMyCertificate_Success))")
 public class Vaccine_Test extends ExecutionContext implements Vaccine {
+
+        @AfterElement
+        public void count_step() {
+                Home_Test.step++;
+                System.out.println("====================== STEP " + Home_Test.step + "======================");
+        }
 
         @Override
         public void e_Back_ConvertCertificateDetail() {
