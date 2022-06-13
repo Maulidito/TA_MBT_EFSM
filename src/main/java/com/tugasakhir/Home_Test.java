@@ -39,8 +39,8 @@ import io.appium.java_client.remote.MobileCapabilityType;
  * also: mvn compile
  */
 
-@GraphWalker(value = "a_star(reached_vertex(v_eHAC))", start = "v_Home")
-// @GraphWalker(value = "a_star(reached_vertex(v_Vaccine))", start = "v_Home")
+ //@GraphWalker(value = "a_star(reached_vertex(v_eHAC))", start = "v_Home")
+@GraphWalker(value = "a_star(reached_vertex(v_Vaccine))", start = "v_Home")
 // @GraphWalker(value = "a_star(reached_vertex(v_Settings))", start = "v_Home")
 public class Home_Test extends ExecutionContext implements Home {
 

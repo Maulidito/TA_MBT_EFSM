@@ -20,7 +20,8 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-//@GraphWalker(value = "weighted_random(reached_edge(e_Delete_ConvertCertificateDetail) && reached_edge(e_Click_ConvertMyCertificate_Success))")
+//@GraphWalker(value = "weighted_random(reached_edge(e_Click_ConvertMyCertificate_Success)&&reached_edge(e_Delete_ConvertCertificateDetail))")
+@GraphWalker(value = "random(reached_edge(e_Click_ConvertMyCertificate_Success)&&reached_edge(e_Delete_ConvertCertificateDetail))")
 public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         @AfterElement
@@ -81,10 +82,10 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
         public void v_List_Vaccine() {
         };
 
-        @Override
-        public void v_VaccineTicket_Detail() {
+        // @Override
+        // public void v_VaccineTicket_Detail() {
 
-        };
+        // };
 
         @Override
         public void v_Form_ConvertCertificate_Identify() {
@@ -93,11 +94,11 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         };
 
-        @Override
-        public void e_Click_VaccineTicket() {
-                Home_Test.clickAnElementById("com.telkom.tracencare:id/ll_vaccine_ticket");
+        // @Override
+        // public void e_Click_VaccineTicket() {
+        //         Home_Test.clickAnElementById("com.telkom.tracencare:id/ll_vaccine_ticket");
 
-        };
+        // };
 
         @Override
         public void e_Click_ConvertMyCertificate_Success() {
@@ -129,47 +130,47 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         };
 
-        @Override
-        public void e_Back_SearchVaccineLocation() {
-                Home_Test.clickAnElementByXpath(
-                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
+        // @Override
+        // public void e_Back_SearchVaccineLocation() {
+        //         Home_Test.clickAnElementByXpath(
+        //                         "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
 
-        };
+        // };
 
         @Override
         public void v_ConvertCertificate_Detail() {
         };
 
-        @Override
-        public void e_Click_VaccineTicketDetail() {
+        // @Override
+        // public void e_Click_VaccineTicketDetail() {
 
-                Home_Test.clickAnElementById("com.telkom.tracencare:id/cl_vaccine_history_patient");
-        };
+        //         Home_Test.clickAnElementById("com.telkom.tracencare:id/cl_vaccine_history_patient");
+        // };
 
         @Override
         public void v_Form_ConvertCertificate_Success() {
         };
 
-        @Override
-        public void e_Click_VaccineLocation() {
+        // @Override
+        // public void e_Click_VaccineLocation() {
 
-                Home_Test.clickAnElementById("com.telkom.tracencare:id/ll_vaccine_location");
-        };
+        //         Home_Test.clickAnElementById("com.telkom.tracencare:id/ll_vaccine_location");
+        // };
 
-        @Override
-        public void e_Click_ModifyLocation() {
+        // @Override
+        // public void e_Click_ModifyLocation() {
 
-                Home_Test.clickAnElementByXpath(
-                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.widget.Button");
-        };
+        //         Home_Test.clickAnElementByXpath(
+        //                         "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.widget.Button");
+        // };
 
-        @Override
-        public void v_VaccineTicket() {
-        };
+        // @Override
+        // public void v_VaccineTicket() {
+        // };
 
-        @Override
-        public void v_Search_VaccineLocation() {
-        };
+        // @Override
+        // public void v_Search_VaccineLocation() {
+        // };
 
         @Override
         public void e_Back_ListVaccine() {
@@ -205,43 +206,43 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         };
 
-        @Override
-        public void e_Back_VaccineTicketDetail() {
-                Home_Test.clickAnElementByAccessbilityId("Navigate up");
-        };
+        // @Override
+        // public void e_Back_VaccineTicketDetail() {
+        //         Home_Test.clickAnElementByAccessbilityId("Navigate up");
+        // };
 
         @Override
         public void v_Home_Vaccine() {
         };
 
-        @Override
-        public void e_Back_VaccineLocation() {
-                Home_Test.clickAnElementByXpath(
-                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
+        // @Override
+        // public void e_Back_VaccineLocation() {
+        //         Home_Test.clickAnElementByXpath(
+        //                         "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button");
 
-        };
+        // };
 
-        @Override
-        public void v_VaccineLocation() {
-                Home_Test.clickAnElementByXpath(
-                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.Button[1]");
+        // @Override
+        // public void v_VaccineLocation() {
+        //         Home_Test.clickAnElementByXpath(
+        //                         "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.Button[1]");
 
-                // ?wait modal
-                Home_Test.clickAnElementByXpath(
-                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View[1]/android.view.View");
+        //         // ?wait modal
+        //         Home_Test.clickAnElementByXpath(
+        //                         "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View[1]/android.view.View");
 
-                // ?
+        //         // ?
 
-                Home_Test.clickAnElementByXpath(
-                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.Button[2]");
+        //         Home_Test.clickAnElementByXpath(
+        //                         "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.Button[2]");
 
-                // ?wait modal
-                Home_Test.clickAnElementByXpath(
-                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View[1]");
+        //         // ?wait modal
+        //         Home_Test.clickAnElementByXpath(
+        //                         "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.ListView/android.view.View[1]");
 
-                // ?
+        //         // ?
 
-        };
+        // };
 
         @Override
         public void e_Back_ConvertMyCertificate_Destination() {
@@ -274,12 +275,12 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         };
 
-        @Override
-        public void e_Back_VaccineTicket() {
+        // @Override
+        // public void e_Back_VaccineTicket() {
 
-                Home_Test.clickAnElementByAccessbilityId("Navigate up");
+        //         Home_Test.clickAnElementByAccessbilityId("Navigate up");
 
-        };
+        // };
 
         @Override
         public void e_Click_ListVaccine() {
@@ -295,12 +296,12 @@ public class Vaccine_Test extends ExecutionContext implements Vaccine {
 
         };
 
-        @Override
-        public void e_Click_SearchVaccineLocation() {
-                Home_Test.clickAnElementByXpath(
-                                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.widget.Button");
+        // @Override
+        // public void e_Click_SearchVaccineLocation() {
+        //         Home_Test.clickAnElementByXpath(
+        //                         "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.widget.Button");
 
-        };
+        // };
 
         @Override
         public void v_Form_ConvertCertificate_Confirmation() {

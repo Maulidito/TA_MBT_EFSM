@@ -17,7 +17,8 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-@GraphWalker(value = "random((reached_edge(e_Close_LandSuccessEHAC)||reached_edge(e_Close_AirSuccsessEHAC)||reached_edge(e_Close_ShipSuccessEHAC)) && reached_edge(e_Delete_DetailMyEHAC))")
+//@GraphWalker(value = "random(reached_edge(e_Delete_DetailMyEHAC))")
+//@GraphWalker(value = "weighted_random(reached_edge(e_Delete_DetailMyEHAC))")
 public class EHAC_Test extends ExecutionContext implements EHAC {
 
         @AfterElement

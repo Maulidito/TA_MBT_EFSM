@@ -11,7 +11,8 @@ import org.graphwalker.java.annotation.Vertex;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-//@GraphWalker(value = "quick_random(reached_edge(e_Delete_ProfileDetail) && reached_edge(e_Save_AddProfile))")
+//@GraphWalker(value = "random(reached_edge(e_Save_AddProfile)&&reached_edge(e_Delete_ProfileDetail))")
+//@GraphWalker(value = "weighted_random(reached_edge(e_Save_AddProfile)&&reached_edge(e_Delete_ProfileDetail))")
 public class LinkedProfile_Test extends ExecutionContext implements LinkedProfile {
 
     @AfterElement
@@ -45,8 +46,9 @@ public class LinkedProfile_Test extends ExecutionContext implements LinkedProfil
 
     @Edge()
     public void e_Click_ProfileDetail() {
+
         Home_Test.clickAnElementByXpath(
-                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]");
+                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]");
     }
 
     @Vertex()
@@ -59,11 +61,11 @@ public class LinkedProfile_Test extends ExecutionContext implements LinkedProfil
 
         // ?
         // ? Click Identity
-        Home_Test.getWait()
-                .until(ExpectedConditions
-                        .visibilityOfElementLocated(By.id("com.telkom.tracencare:id/et_identity_number")));
-        Home_Test.getDriver().findElement(By.id("com.telkom.tracencare:id/et_identity_number"))
-                .sendKeys("TESTING" + new Random().nextInt(100));
+        // Home_Test.getWait()
+        //         .until(ExpectedConditions
+        //                 .visibilityOfElementLocated(By.id("com.telkom.tracencare:id/et_identity_number")));
+        // Home_Test.getDriver().findElement(By.id("com.telkom.tracencare:id/et_identity_number"))
+        //         .sendKeys("TESTING" + new Random().nextInt(100));
         // ?
     }
 
