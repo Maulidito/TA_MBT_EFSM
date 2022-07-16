@@ -47,11 +47,32 @@ public class LinkedProfile_Test extends ExecutionContext implements LinkedProfil
     @Edge()
     public void e_Click_ProfileDetail() {
 
+<<<<<<< HEAD
+=======
+        Home_Test.clickAnElementByXpath(
+                "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]");
+>>>>>>> dc44e637561d21f3858ca91b910a7797659f3e33
     }
 
     @Vertex()
     public void v_Profile_Detail() {
 
+<<<<<<< HEAD
+=======
+        // ? Click Full Name
+        Home_Test.getWait()
+                .until(ExpectedConditions.visibilityOfElementLocated(By.id("com.telkom.tracencare:id/et_full_name")));
+        Home_Test.getDriver().findElement(By.id("com.telkom.tracencare:id/et_full_name")).sendKeys("TESTING");
+
+        // ?
+        // ? Click Identity
+        // Home_Test.getWait()
+        //         .until(ExpectedConditions
+        //                 .visibilityOfElementLocated(By.id("com.telkom.tracencare:id/et_identity_number")));
+        // Home_Test.getDriver().findElement(By.id("com.telkom.tracencare:id/et_identity_number"))
+        //         .sendKeys("TESTING" + new Random().nextInt(100));
+        // ?
+>>>>>>> dc44e637561d21f3858ca91b910a7797659f3e33
     }
 
     @Edge()
