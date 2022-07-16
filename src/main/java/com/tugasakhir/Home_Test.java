@@ -39,9 +39,9 @@ import io.appium.java_client.remote.MobileCapabilityType;
  * also: mvn compile
  */
 
-@GraphWalker(value = "a_star(reached_vertex(v_eHAC))", start = "v_Home")
+// @GraphWalker(value = "a_star(reached_vertex(v_eHAC))", start = "v_Home")
 // @GraphWalker(value = "a_star(reached_vertex(v_Vaccine))", start = "v_Home")
-// @GraphWalker(value = "a_star(reached_vertex(v_Settings))", start = "v_Home")
+@GraphWalker(value = "a_star(reached_vertex(v_Settings))", start = "v_Home")
 public class Home_Test extends ExecutionContext implements Home {
 
   static public AndroidDriver<MobileElement> driver;
@@ -126,91 +126,60 @@ public class Home_Test extends ExecutionContext implements Home {
   @Override
   public void e_Click_Vaccine() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[1]"))
-        .click();
-
-    // driver.findElementByAndroidUIAutomator("text(\"COVID-19 Vaccine\")").click();
 
   }
 
   // @Override
   public void e_Click_Covid19TestResult() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[2]"))
-        .click();
+
   }
 
   @Override
   public void e_Click_eHAC() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[3]"))
-        .click();
 
-    // driver.findElementByAndroidUIAutomator("text(\"EHAC\")").click();
   }
 
   // @Override
   public void e_Click_TravelRegulations() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[4]"))
-        .click();
+
   }
 
   // @Override
   public void e_Click_Telemedicine() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[5]"))
-        .click();
+
   }
 
   // @Override
   public void e_Click_HealthcareFacility() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[6]"))
-        .click();
+
   }
 
   // @Override
   public void e_Click_Covid19Statistic() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[7]"))
-        .click();
+
   }
 
   // @Override
   public void e_Click_FindHospital() {
     // TODO Auto-generated method stub
 
-    driver.findElement(By.xpath(
-        headerXpathItemButton + "[8]"))
-        .click();
   }
 
   // @Override
   public void e_Click_ScanQRCode() {
     // TODO Auto-generated method stub
-    String btn_id = "com.telkom.tracencare:id/btn_nav_scan_checkin";
-    // String btn_id_agree =
-    // "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[8]/android.view.ViewGroup/android.widget.TextView";
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(btn_id)));
-    driver.findElement(By.id(btn_id)).click();
-    // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(btn_id_agree)));
-
-    // driver.findElement(By.xpath(btn_id_agree)).click();
 
   }
 
   // @Override
   public void e_Click_Notifications() {
     // TODO Auto-generated method stub
-    driver.findElement(By.id("com.telkom.tracencare:id/iv_notification")).click();
 
   }
 
@@ -218,71 +187,53 @@ public class Home_Test extends ExecutionContext implements Home {
   public void e_Back_FindHospital() {
     // TODO Auto-generated method stub
 
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-        "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]")));
-
-    driver.navigate().back();
-
   }
 
   // @Override
   public void e_Back_Covid19Statistic() {
     // TODO Auto-generated method stub
 
-    clickAnElementByAccessbilityId("Navigate up");
-
   }
 
   // @Override
   public void e_Back_HealthcareFacility() {
     // TODO Auto-generated method stub
-    clickAnElementByAccessbilityId("Navigate up");
 
   }
 
   // @Override
   public void e_Back_Telemedicine() {
     // TODO Auto-generated method stub
-    clickAnElementByAccessbilityId("Navigate up");
+
   }
 
   // @Override
   public void e_Back_TravelRegulations() {
     // TODO Auto-generated method stub
-    String id = "com.telkom.tracencare:id/iv_back";
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
-    driver.findElement(By.id(id)).click();
+
   }
 
   @Override
   public void e_Back_eHAC() {
     // TODO Auto-generated method stub
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.telkom.tracencare:id/iv_back")));
-    driver.findElement(By.id("com.telkom.tracencare:id/iv_back")).click();
 
   }
 
   // @Override
   public void e_Back_Covid19TestResult() {
     // TODO Auto-generated method stub
-    driver.findElement(By.xpath(
-        "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.RelativeLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.widget.Button"))
-        .click();
 
   }
 
   @Override
   public void e_Back_Vaccine() {
     // TODO Auto-generated method stub
-    driver.findElement(By.id("com.telkom.tracencare:id/iv_back")).click();
 
   }
 
   // @Override
   public void e_Back_Notifications() {
     // TODO Auto-generated method stub
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("com.telkom.tracencare:id/iv_back")));
-    driver.findElement(By.id("com.telkom.tracencare:id/iv_back")).click();
 
   }
 
@@ -290,19 +241,16 @@ public class Home_Test extends ExecutionContext implements Home {
   public void e_Back_ScanQRCode() {
     // TODO Auto-generated method stub
 
-    driver.findElement(By.id("com.telkom.tracencare:id/iv_close")).click();
   }
 
   // @Override
   public void e_Back_CheckInPreference() {
-    clickAnElementByAccessbilityId("Navigate up");
+
   }
 
   // @Override
   public void e_Click_CheckInPreference() {
-    String id = "com.telkom.tracencare:id/btn_nav_scan_settings_checkin";
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
-    driver.findElement(By.id(id)).click();
+
   }
 
   // @Override
@@ -312,7 +260,7 @@ public class Home_Test extends ExecutionContext implements Home {
 
   @Override
   public void e_Back_Settings() {
-    clickAnElementByAccessbilityId("Navigate up");
+
   };
 
   @Override
@@ -321,7 +269,7 @@ public class Home_Test extends ExecutionContext implements Home {
 
   @Override
   public void e_Click_Settings() {
-    clickAnElementById("com.telkom.tracencare:id/ic_profile");
+
   };
 
   public class configurationDevice {
@@ -365,139 +313,45 @@ public class Home_Test extends ExecutionContext implements Home {
   }
 
   static public void clickAnElementByXpath(String xpathText) {
-    try {
-      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathText)));
-      driver.findElement(By.xpath(xpathText)).click();
-    } catch (StaleElementReferenceException e) {
-      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
-      // TODO: handle exception
-    } catch (org.openqa.selenium.TimeoutException e) {
-      // TODO: handle exception
-      // driver.findElement(By.xpath(xpathText)).click();
-    }
+
   }
 
   static public void
 
       clickAnElementByTextContains(String text) {
-    try {
-      // wait.until(ExpectedConditions.visibilityOfElementLocated(ByAndroidUIAutomator.AndroidUIAutomator(text)));
-      sleepBeforeActivity();
-      driver.findElementByAndroidUIAutomator(
-          "new UiSelector().textContains(\"" + text + "\")").click();
 
-    } catch (NoSuchElementException e) {
-      sleepBeforeActivity();
-      driver.findElementByAndroidUIAutomator(
-          "new UiSelector().textContains(\"" + "check" + "\")").click();
-
-    } catch (StaleElementReferenceException e) {
-      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
-      // TODO: handle exception
-    } catch (org.openqa.selenium.TimeoutException e) {
-      // TODO: handle exception
-      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
-    }
   }
 
   static public void clickAnElementById(String idText) {
-    try {
-      wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(idText)));
-      driver.findElement(MobileBy.id(idText)).click();
 
-    } catch (StaleElementReferenceException e) {
-      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
-      // TODO: handle exception
-    } catch (org.openqa.selenium.TimeoutException e) {
-      // TODO: handle exception
-      driver.findElement(By.id(idText)).click();
-    }
   }
 
   static public void clickAnElementByResourceId(String idText) {
-    try {
-      // wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id(idText)));
-      sleepBeforeActivity();
-      driver.findElementByAndroidUIAutomator(
-          "new UiSelector().resourceId(\"" + idText + "\")").click();
 
-    } catch (StaleElementReferenceException e) {
-      // driver.findElementByAndroidUIAutomator("text(\"back\")").click();
-      // TODO: handle exception
-    } catch (org.openqa.selenium.TimeoutException e) {
-      // TODO: handle exception
-      driver.findElement(By.id(idText)).click();
-    }
   }
 
   static public void clickAnElementByAccessbilityId(String accessId) {
-    try {
-      wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.AccessibilityId(accessId)));
-      driver.findElementByAccessibilityId(accessId).click();
-    } catch (org.openqa.selenium.TimeoutException e) {
-      // TODO: handle exception
-      driver.findElement(By.id(accessId)).click();
-    }
+
   }
 
   static public void sleepBeforeActivity() {
-    try {
+    // try {
 
-      Thread.sleep(3000);
-    } catch (InterruptedException e) {
-      // TODO: handle exception
-    }
+    // Thread.sleep(3000);
+    // } catch (InterruptedException e) {
+    // // TODO: handle exception
+    // }
 
   }
 
   @BeforeExecution
   public void setup() {
 
-    configurationDevice device = new configurationDevice();
-    appConfiguration appConf = new appConfiguration();
-    File classpathRoot = new File(System.getProperty("user.dir"));
-    File appDir = new File(classpathRoot, "src/main/apk");
-    File app = new File(appDir, "peduliLindungi.apk");
-    DesiredCapabilities capabilities = new DesiredCapabilities();
-    capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, device.deviceName);
-    capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, device.deviceVersion);
-    // capabilities.setCapability(MobileCapabilityType.UDID, device.udid);
-    capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
-    capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-
-    // capabilities.setCapability("app", app.getAbsolutePath());
-    capabilities.setCapability("appPackage", appConf.appPackage);
-    capabilities.setCapability("appActivity", appConf.activity);
-    // capabilities.setCapability("avdArgs", "netfast");
-    capabilities.setCapability("noReset", "true");
-    // capabilities.setCapability("autoWebview", "true");
-    capabilities.setCapability("autoLaunch", "false");
-    capabilities.setCapability("fullReset", "false");
-    capabilities.setCapability("unicodeKeyboard", "false");
-    capabilities.setCapability("resetKeyboard", "false");
-    capabilities.setCapability(MobileCapabilityType.TAKES_SCREENSHOT, "false");
-
-    try {
-      System.out.println("get ready for init driver");
-      driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-      dimension = driver.manage().window().getSize();
-      touch = new TouchAction(driver);
-
-      driver.launchApp();
-      System.out.println("Check driver =>" + driver);
-    } catch (MalformedURLException e) {
-      System.out.println("error in driver section");
-      e.printStackTrace();
-    } catch (Exception e) {
-      System.out.println("error in driver section Execption => " + e.toString());
-    }
-    wait = new WebDriverWait(driver, 10);
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @AfterExecution
   public void tearDown() {
-    driver.quit();
+
     System.out.println("TEST DONE");
     System.out.println("THE TEST HAVE " + step + " STEP");
   }
